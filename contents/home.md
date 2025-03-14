@@ -12,5 +12,5 @@ M.E., Control Science and Engineering, Southern University of Science and Techno
 B.E., Automation, Donghua University, 2021-2025(expected).
 
 #### Research Interests
-Deep Learning, Rust.
+Deep Learning, Rust, C.
 
