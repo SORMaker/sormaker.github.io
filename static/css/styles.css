@@ -138,6 +138,10 @@ h2, .h2 {
   }
 }
 
+.top-section h2#top-section-bg-text {
+  transform: translate(-130px, -50px); /* 向左偏移10px，向上偏移10px，可按需调整数值 */
+}
+
 h3, .h3 {
   font-size: calc(1.3rem + 0.6vw);
 }

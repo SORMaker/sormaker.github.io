@@ -5,7 +5,7 @@
 I love coding
 
 #### Email
-xiezy3@gmail.com
+xiezy3[at]gmail.com
 
 #### Education
 M.E., Control Science and Engineering, Southern University of Science and Technology, 2025—2028 (expected).\
