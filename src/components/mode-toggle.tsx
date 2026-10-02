@@ -1,8 +1,23 @@
 "use client";
+
 import { Button } from "@/components/ui/button";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
-export function ModeToggle() {
-  const { resolvedTheme, setTheme } = useTheme();
-  return <Button variant="ghost" size="icon" className="theme-toggle" aria-label="Toggle color theme" onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}><SunIcon className="theme-sun" aria-hidden="true" /><MoonIcon className="theme-moon" aria-hidden="true" /></Button>;
+import { cn } from "@/lib/utils";
+
+export function ModeToggle({ className }: { className?: string }) {
+  const { theme, setTheme } = useTheme();
+
+  return (
+    <Button
+      type="button"
+      variant="link"
+      size="icon"
+      className={cn(className)}
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+    >
+      <SunIcon className="h-full w-full dark:hidden" />
+      <MoonIcon className="hidden h-full w-full dark:block" />
+    </Button>
+  );
 }
