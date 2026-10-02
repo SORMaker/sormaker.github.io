@@ -47,6 +47,7 @@ export default function ProjectsSection() {
                                 image={project.image}
                                 imageFit={"imageFit" in project ? project.imageFit : undefined}
                                 imageAlt={"imageAlt" in project ? project.imageAlt : undefined}
+                                mediaCaption={"mediaCaption" in project ? project.mediaCaption : undefined}
                                 video={project.video}
                                 links={project.links}
                             />

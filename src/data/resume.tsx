@@ -128,7 +128,10 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/projects/vln-navigation-success.gif",
+      imageFit: "contain",
+      imageAlt: "Successful Seq2Seq baseline navigation replay showing the agent route and ground-truth route in top and 3D views",
+      mediaCaption: "Seq2Seq baseline · navigation replay",
       video: "",
     },
     {
@@ -155,8 +158,8 @@ export const DATA = {
       dates: "Aug 2023 - Sep 2023",
       active: true,
       description:
-        "A vision-guided system in which a green laser automatically tracks a moving red-laser target. I implemented OpenMV detection to extract the target's real-time X/Y coordinates and built the communication link between the vision module and the tracking controller. **National First Prize**, Electronics Design Contest.",
-      technologies: ["OpenMV", "Machine Vision", "Embedded Control"],
+        "A vision-guided system in which a green laser automatically tracks a moving red-laser target. I implemented target detection on K210 to extract the target's real-time X/Y coordinates and built the communication link between the vision module and the tracking controller. **National First Prize**, Electronics Design Contest.",
+      technologies: ["K210", "Machine Vision", "Embedded Control"],
       links: [
         {
           type: "Source",

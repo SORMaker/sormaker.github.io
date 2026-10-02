@@ -35,6 +35,7 @@ interface Props {
   image?: string;
   imageFit?: "cover" | "contain";
   imageAlt?: string;
+  mediaCaption?: string;
   video?: string;
   links?: readonly {
     icon: React.ReactNode;
@@ -54,6 +55,7 @@ export function ProjectCard({
   image,
   imageFit,
   imageAlt,
+  mediaCaption,
   video,
   links,
   className,
@@ -88,6 +90,11 @@ export function ProjectCard({
             <div className="w-full h-48 bg-muted" />
           )}
         </Link>
+        {mediaCaption && (
+          <p className="border-t border-border px-3 py-2 text-[11px] text-muted-foreground">
+            {mediaCaption}
+          </p>
+        )}
         {links && links.length > 0 && (
           <div className="absolute top-2 right-2 flex flex-wrap gap-2">
             {links.map((link, idx) => (

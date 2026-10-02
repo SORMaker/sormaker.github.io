@@ -51,6 +51,8 @@ ACT material comes from [troncamp-mani](https://github.com/SORMaker/troncamp-man
 
 The Laser Target Tracking System animation is copied from [2023NUEDC's system overview](https://github.com/SORMaker/2023NUEDC/blob/f3032291f13c001c31809e6b0aaba4a1194269bd/assets/system-overview.gif). It illustrates the source architecture and a tracking model with assumed actuator dynamics; it is not recorded hardware footage. The card displays the complete diagram without cropping.
 
+The VLN card uses the [published navigation replay](https://github.com/SORMaker/VLN/blob/dcda0da3a1cdd4b1b069386866578308d796233c/assets/homepage/README.md) from a Seq2Seq baseline run. Its caption distinguishes this selected successful validation episode from the LLM-agent experiment described in the project text. The GIF is copied unchanged and displayed without cropping.
+
 The [bicycle repository](https://github.com/SORMaker/CH32-Bike-Overland) credits SORMaker and Jasom_Wu for software design and ErBW_s for hardware. Its competition photo and the ACT rollout video are stored locally; the video autoplays muted in its project card, as in the template.
 
 Research is labeled as a research project. No publication status or public manuscript download is implied.
