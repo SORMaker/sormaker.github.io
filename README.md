@@ -49,6 +49,8 @@ Blog lists use static pagination paths so direct links also work on GitHub Pages
 
 ACT material comes from [troncamp-mani](https://github.com/SORMaker/troncamp-mani). T4 64.3/100 is a reported competition score, not a success rate. This is an ACT reproduction, not a new policy architecture.
 
+The Laser Target Tracking System animation is copied from [2023NUEDC's system overview](https://github.com/SORMaker/2023NUEDC/blob/f3032291f13c001c31809e6b0aaba4a1194269bd/assets/system-overview.gif). It illustrates the source architecture and a tracking model with assumed actuator dynamics; it is not recorded hardware footage. The card displays the complete diagram without cropping.
+
 The [bicycle repository](https://github.com/SORMaker/CH32-Bike-Overland) credits SORMaker and Jasom_Wu for software design and ErBW_s for hardware. Its competition photo and the ACT rollout video are stored locally; the video autoplays muted in its project card, as in the template.
 
 Research is labeled as a research project. No publication status or public manuscript download is implied.

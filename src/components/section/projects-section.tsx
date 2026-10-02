@@ -45,6 +45,8 @@ export default function ProjectsSection() {
                                 dates={project.dates}
                                 tags={project.technologies}
                                 image={project.image}
+                                imageFit={"imageFit" in project ? project.imageFit : undefined}
+                                imageAlt={"imageAlt" in project ? project.imageAlt : undefined}
                                 video={project.video}
                                 links={project.links}
                             />
@@ -55,4 +57,3 @@ export default function ProjectsSection() {
         </section>
     );
 }
-
