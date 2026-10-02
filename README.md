@@ -54,3 +54,5 @@ The [bicycle repository](https://github.com/SORMaker/CH32-Bike-Overland) credits
 Research is labeled as a research project. No publication status or public manuscript download is implied.
 
 University emblems are from the official [SUSTech visual identity page](https://www.sustech.edu.cn/en/school_logo.html) and [Donghua University identity page](https://www.dhu.edu.cn/xxbs/list.htm). Their original colors and proportions are preserved.
+
+The TRON Camp logo uses the standalone LimX Dynamics mark from the company's [official icon assets](https://www.limxdynamics.com/iconfont/iconfont.js?v=c30ed1043a), with a white background for contrast in both themes.

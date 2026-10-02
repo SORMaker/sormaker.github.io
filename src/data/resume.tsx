@@ -54,7 +54,7 @@ export const DATA = {
       badges: [],
       location: "Offline competition",
       title: "Team LIMY · 5th place",
-      logoUrl: "",
+      logoUrl: "/organizations/limx-dynamics.svg",
       start: "Aug 2026",
       end: "Aug 2026",
       description:
