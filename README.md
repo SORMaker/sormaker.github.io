@@ -1,47 +1,42 @@
-<div align="center">
-<img alt="Portfolio" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
-</div>
+# Zhengyang Xie · Robotics & Control
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
+Personal portfolio: https://sormaker.github.io
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+Adapted from [Magic UI Portfolio](https://github.com/magicuidesign/portfolio), with the original MIT license and Dillion Verma copyright retained in LICENSE.
 
-# Features
+## Develop
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+Use Node.js 24 and pnpm 11.25.0.
 
-# Getting Started Locally
+```sh
+pnpm install --frozen-lockfile
+pnpm dev --hostname 127.0.0.1 --port 4318
+```
 
-1. Clone this repository to your local machine:
+## Build and deploy
 
-   ```bash
-   git clone https://github.com/dillionverma/portfolio
-   ```
+```sh
+pnpm lint
+pnpm build
+```
 
-2. Move to the cloned directory
+Next.js exports the site to `out/`. Pushing to `main` runs `.github/workflows/pages.yml`, which builds and deploys this directory to GitHub Pages. The repository's Pages publishing source must be GitHub Actions.
 
-   ```bash
-   cd portfolio
-   ```
+## Update content
 
-3. Install dependencies:
+- `src/data/resume.tsx`: profile, contact, experience, education, skills and honors.
+- `src/data/projects.ts`: shared project-card and detail-page content.
+- `src/data/research.ts`: research summary and manuscript information.
+- `src/app/globals.css`: responsive layout and light/dark colors.
 
-   ```bash
-   pnpm install
-   ```
+To enable a Resume button, add an approved PDF to `public/` and set `resumeUrl` in `resume.tsx`. It remains hidden when the value is null.
 
-4. Start the local Server:
+## Content and assets
 
-   ```bash
-   pnpm dev
-   ```
+ACT material comes from [troncamp-mani](https://github.com/SORMaker/troncamp-mani). T4 64.3/100 is a reported competition score, not a success rate. This is an ACT reproduction, not a new policy architecture.
 
-5. Open the [Config file](./src/data/resume.tsx) and make changes
+The [bicycle repository](https://github.com/SORMaker/CH32-Bike-Overland) credits SORMaker and Jasom_Wu for software design and ErBW_s for hardware. Its competition photo and the ACT rollout video are stored locally; video loads only after Play.
 
-# License
+Research is labeled as a research project. No publication status or public manuscript download is implied.
 
-Licensed under the [MIT license](https://github.com/dillionverma/portfolio/blob/main/LICENSE.md).
+University emblems are from the official [SUSTech visual identity page](https://www.sustech.edu.cn/en/school_logo.html) and [Donghua University identity page](https://www.dhu.edu.cn/xxbs/list.htm). Their original colors and proportions are preserved.

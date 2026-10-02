@@ -38,3 +38,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .content-collections
+
+# Local verification evidence
+/verification/
+
+# Local editor/agent guidance
+/AGENTS.md
+/CLAUDE.md
