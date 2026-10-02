@@ -1,7 +1,11 @@
 import { Icons } from "@/components/icons";
-import { BookOpenText, HomeIcon } from "lucide-react";
+import { BookOpenText, BrainCircuit, Combine, Cpu, HomeIcon } from "lucide-react";
 import { Python } from "@/components/ui/svgs/python";
-import { Csharp } from "@/components/ui/svgs/csharp";
+import { Cplusplus } from "@/components/ui/svgs/cplusplus";
+import { PyTorch } from "@/components/ui/svgs/pytorch";
+import { Ros } from "@/components/ui/svgs/ros";
+import { Matlab } from "@/components/ui/svgs/matlab";
+import { Git } from "@/components/ui/svgs/git";
 
 export const DATA = {
   name: "Zhengyang Xie",
@@ -16,15 +20,14 @@ export const DATA = {
   avatarUrl: "/avatar.webp",
   skills: [
     { name: "Python", icon: Python },
-    { name: "C/C++", icon: Csharp },
-    { name: "PyTorch" },
-    { name: "ROS" },
-    { name: "MATLAB" },
-    { name: "Git" },
-    { name: "LaTeX" },
-    { name: "Imitation Learning" },
-    { name: "Embedded Control" },
-    { name: "Sensor Fusion" },
+    { name: "C/C++", icon: Cplusplus },
+    { name: "PyTorch", icon: PyTorch },
+    { name: "ROS", icon: Ros },
+    { name: "MATLAB", icon: Matlab },
+    { name: "Git", icon: Git },
+    { name: "Imitation Learning", icon: BrainCircuit },
+    { name: "Embedded Control", icon: Cpu },
+    { name: "Sensor Fusion", icon: Combine },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },

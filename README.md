@@ -56,3 +56,5 @@ Research is labeled as a research project. No publication status or public manus
 University emblems are from the official [SUSTech visual identity page](https://www.sustech.edu.cn/en/school_logo.html) and [Donghua University identity page](https://www.dhu.edu.cn/xxbs/list.htm). Their original colors and proportions are preserved.
 
 The TRON Camp logo uses the standalone LimX Dynamics mark from the company's [official icon assets](https://www.limxdynamics.com/iconfont/iconfont.js?v=c30ed1043a), with a white background for contrast in both themes.
+
+C++, PyTorch, ROS, MATLAB, and Git skill logos come from [Devicon](https://github.com/devicons/devicon); its MIT notice is included alongside the SVG components. The other skill symbols use Lucide.
