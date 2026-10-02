@@ -32,20 +32,20 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "autonomous-off-road-bicycle", title: "Autonomous Off-road Bicycle", category: "Robot control · Team project",
-    summary: "An autonomous bicycle that combines INS/GNSS localization, B-spline route planning, and embedded path tracking.",
-    role: "I contributed to software design with Jasom_Wu, and ErBW_s designed the hardware.",
+    summary: "A self-balancing autonomous bicycle combining sensor fusion, route planning, and embedded control.",
+    role: "I developed the CH32V307 control software, balance controller, and attitude and position estimation.",
     result: "National First Prize · 3rd place, Off-road Bicycle Category (2023).",
-    tags: ["INS / GNSS", "B-spline planning", "Path tracking", "Embedded systems"],
+    tags: ["CH32V307", "Cascade PID", "Sensor fusion", "Embedded control"],
     repository: "https://github.com/SORMaker/CH32-Bike-Overland",
     image: { src: "/projects/bicycle.webp", alt: "The team's autonomous bicycle at the 2023 National University Students Intelligent Car Race" },
     problem: "Build an embedded robot that can localize, plan, and follow an off-road route on an autonomous bicycle platform in a national competition.",
     approach: [
-      { title: "Localization", text: "Combine inertial navigation and GNSS information to estimate the bicycle's position along the route." },
-      { title: "Route planning", text: "Use B-spline route planning to prepare a path for the vehicle to follow." },
-      { title: "Path tracking", text: "Connect localization and route planning to embedded tracking control on the team's custom hardware platform." }
+      { title: "Balance control", text: "Implemented a three-stage cascade PID controller for self-balancing and added angular-rate negative feedback to reduce servo jitter." },
+      { title: "Attitude and position estimation", text: "Used the Mahony algorithm for attitude estimation and developed GPS–IMU fusion for position tracking in outdoor environments." },
+      { title: "Embedded integration", text: "Developed the control system on a WCH CH32V307 microcontroller. The overall bicycle system combined localization, B-spline route planning, and path tracking." }
     ],
     evidence: [],
-    limitations: []
+    limitations: ["Software design was shared with Jasom_Wu; ErBW_s designed the hardware."]
   }
 ];
 export const getProject = (slug: string) => PROJECTS.find(project => project.slug === slug);
