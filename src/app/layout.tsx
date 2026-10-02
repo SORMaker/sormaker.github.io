@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "katex/dist/katex.min.css";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 
 const geist = Geist({
@@ -35,6 +36,7 @@ export const metadata: Metadata = {
     siteName: `${DATA.name}`,
     locale: "en_US",
     type: "website",
+    images: [{ url: "/og/home.png", width: 1200, height: 630, alt: "Zhengyang Xie · Robotics & Control" }],
   },
   robots: {
     index: true,
@@ -50,6 +52,7 @@ export const metadata: Metadata = {
   twitter: {
     title: `${DATA.name}`,
     card: "summary_large_image",
+    images: ["/og/home.png"],
   },
   verification: {
     google: "",

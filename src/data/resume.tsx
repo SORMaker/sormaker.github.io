@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon } from "lucide-react";
+import { BookOpenText, HomeIcon } from "lucide-react";
 import { Python } from "@/components/ui/svgs/python";
 import { Csharp } from "@/components/ui/svgs/csharp";
 
@@ -26,7 +26,10 @@ export const DATA = {
     { name: "Embedded Control" },
     { name: "Sensor Fusion" },
   ],
-  navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
+  navbar: [
+    { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/blog/", icon: BookOpenText, label: "Blog" },
+  ],
   contact: {
     email: "xiezy3@gmail.com",
     social: {

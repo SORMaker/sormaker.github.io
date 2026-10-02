@@ -42,6 +42,69 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@layer components {
+  .blog-toc {
+    @apply w-fit max-w-full rounded-lg border border-border bg-muted/20 px-3 py-2 text-sm;
+  }
+
+  .blog-toc summary {
+    @apply cursor-pointer select-none font-medium text-muted-foreground marker:text-muted-foreground hover:text-foreground;
+  }
+
+  .blog-prose {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .blog-prose .blog-code {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .blog-prose .blog-code pre {
+    @apply m-0! max-w-full overflow-x-auto rounded-none! border-0! bg-transparent! p-4! pr-14! font-mono! leading-relaxed;
+  }
+
+  .blog-prose .blog-code pre code {
+    @apply m-0! border-0! bg-transparent! p-0! text-[13px]! font-mono! leading-relaxed! text-foreground!;
+    white-space: pre;
+  }
+
+  .blog-prose .blog-code [style*="--shiki-light"] {
+    color: var(--shiki-light) !important;
+    background-color: transparent !important;
+  }
+
+  .dark .blog-prose .blog-code [style*="--shiki-dark"] {
+    color: var(--shiki-dark) !important;
+  }
+
+  .blog-prose .katex-display {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 0.25rem;
+  }
+
+  .blog-prose :not(.katex-display) > .katex {
+    display: inline-block;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    vertical-align: middle;
+  }
+
+  .blog-prose > div.overflow-x-auto {
+    max-width: 100%;
+  }
+
+  .blog-prose :where(table) {
+    width: max-content;
+    min-width: 100%;
+    max-width: none;
+  }
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

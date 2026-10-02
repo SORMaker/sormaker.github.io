@@ -30,6 +30,21 @@ The layout, animations and components follow the original Magic UI Portfolio tem
 - `src/components/section/*.tsx`: section headings and intro text (projects, honors, contact).
 - `public/`: avatar, project images/video and university logos.
 
+## Blog
+
+Articles and series are imported from [Notion-Backup](https://github.com/SORMaker/Notion-Backup). The checked-in Markdown and assets make the site independent of Notion at runtime.
+
+```sh
+node scripts/import-notes.mjs /Users/sorx/Notion-Backup
+node scripts/generate-share-images.mjs '/System/Library/Fonts/Supplemental/Arial Unicode.ttf'
+pnpm lint
+pnpm build
+```
+
+`src/data/blog-manifest.json` records source paths, the source commit, and update dates from Git. `content/notes/` contains the imported text; `public/blog-assets/` and `public/og/` contain local media and share images. The image command accepts a CJK-capable TTF font path; PNGs are committed and need no system font on GitHub Actions. The importer omits the old homepage, repository checklist, and the two unfinished linear algebra entries (Lectures 31 and 32).
+
+Blog lists use static pagination paths so direct links also work on GitHub Pages.
+
 ## Content and assets
 
 ACT material comes from [troncamp-mani](https://github.com/SORMaker/troncamp-mani). T4 64.3/100 is a reported competition score, not a success rate. This is an ACT reproduction, not a new policy architecture.
