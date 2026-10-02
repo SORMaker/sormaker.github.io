@@ -28,7 +28,7 @@ export const DATA = {
   ],
   navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
   contact: {
-    email: "xiezy2025@mail.sustech.edu.cn",
+    email: "xiezy3@gmail.com",
     social: {
       GitHub: {
         name: "GitHub",
@@ -38,7 +38,7 @@ export const DATA = {
       },
       email: {
         name: "Email",
-        url: "mailto:xiezy2025@mail.sustech.edu.cn",
+        url: "mailto:xiezy3@gmail.com",
         icon: Icons.email,
         navbar: true,
       },
@@ -74,7 +74,7 @@ export const DATA = {
     {
       school: "Southern University of Science and Technology",
       href: "https://www.sustech.edu.cn/en/",
-      degree: "M.S. in Control Science and Engineering",
+      degree: "M.Eng. in Control Science and Engineering",
       logoUrl: "/education/sustech.png",
       start: "Sep 2025",
       end: "Jun 2028",
@@ -113,7 +113,7 @@ export const DATA = {
       dates: "Jan 2025 - Jun 2025",
       active: true,
       description:
-        "Starting from an LSTM-with-attention Seq2Seq baseline in the Matterport3D simulator, I replaced the learned policy with an LLM agent and encoded the navigation graph's node connectivity as text prompts to improve spatial reasoning. The LLM agent achieved a **2.3×** higher success rate in unseen environments.",
+        "Starting from an LSTM-with-attention Seq2Seq baseline in the Matterport3D simulator, I replaced the learned policy with an LLM agent and encoded the navigation graph's node connectivity as text prompts to improve spatial reasoning. The LLM agent achieved a **2.3×** higher success rate in unseen environments. This work later grew into [MD-Grasp](/#publications), published at PRCV 2025.",
       technologies: ["Python", "LLM Agents", "Matterport3D", "Seq2Seq"],
       links: [
         {
