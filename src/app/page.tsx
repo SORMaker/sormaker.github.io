@@ -113,6 +113,38 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <section id="publications">
+        <div className="flex min-h-0 flex-col gap-y-6">
+          <BlurFade delay={BLUR_FADE_DELAY * 8.5}>
+            <h2 className="text-xl font-bold">Publications</h2>
+          </BlurFade>
+          <div className="flex flex-col gap-8">
+            {DATA.publications.map((publication, index) => (
+              <BlurFade
+                key={publication.title}
+                delay={BLUR_FADE_DELAY * 8.5 + index * 0.05}
+              >
+                <div className="flex items-start gap-x-3 justify-between">
+                  <div className="flex-1 min-w-0 flex flex-col gap-1">
+                    <div className="font-semibold leading-snug">
+                      {publication.title}
+                    </div>
+                    <div className="font-sans text-sm text-muted-foreground [&_strong]:text-foreground [&_strong]:font-medium [&_p]:m-0">
+                      <Markdown>{publication.authors}</Markdown>
+                    </div>
+                    <div className="font-sans text-sm italic text-muted-foreground">
+                      {publication.venue}
+                    </div>
+                  </div>
+                  <div className="text-xs tabular-nums text-muted-foreground text-right flex-none">
+                    {publication.year}
+                  </div>
+                </div>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
