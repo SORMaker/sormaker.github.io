@@ -1,7 +1,7 @@
 export const DATA = {
   name: "Zhengyang Xie", initials: "ZX", avatarUrl: "/avatar.webp",
-  description: "Master's student in Control Science and Engineering at SUSTech, with experience in robot control, embedded systems, and imitation learning.",
-  summary: "My work spans autonomous navigation, ACT-based manipulation in simulation, and adaptive estimation. I am looking for internship opportunities in robot learning and vision-language-action (VLA) systems.",
+  description: "M.Eng. student at SUSTech · Control Science and Engineering · Expected Jun. 2028",
+  summary: "My work spans robot learning, manipulation, and control. I am seeking internships in robot learning and VLA.",
   focus: "Seeking internships in robot learning & VLA",
   resumeUrl: null as string | null,
   contact: { email: "xiezy2025@mail.sustech.edu.cn", github: "https://github.com/SORMaker" },
