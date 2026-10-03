@@ -64,7 +64,7 @@ export const DATA = {
       start: "Jul 2026",
       end: "Aug 2026",
       description:
-        "Qualified through the online simulation stage (Jul 4–24), then competed onsite (Aug 3–7) with the TRON2 dual-arm robot.\n\n- **One policy, two tasks.** Contributed to 8-GPU LoRA fine-tuning of a π0.5 VLA with [FluxVLA](https://github.com/emoPointer/FluxVLA-Tron2), combining flower arranging and language-conditioned sorting in a single policy; in competition-time robot trials, joint training outperformed separately trained policies.\n- **Demonstration data.** Planned and collected VR teleoperation demonstrations with the team on the three-camera TRON2 (500 sorting demos across 10 prompts, 600 folding demos), removed corrupted episodes, and flagged low-quality demonstrations.\n- **Targeted corrections.** To fix failed insertions at the vase opening, contributed to 50 DAgger-style correction demos on top of 300 flower-arranging demos, and evaluated intermediate checkpoints with full-task robot rollouts.\n- **Simulation qualifier.** Trained ACT policies for four simulated tasks — see [ACT for Dual-Arm Manipulation](/#projects).",
+        "Qualified through the online simulation stage (Jul 4–24), then competed onsite (Aug 3–7) with the TRON2 dual-arm robot.\n\n- **One policy, two tasks.** Contributed to LoRA fine-tuning of a π0.5 VLA on 8× RTX PRO 6000 GPUs with [FluxVLA](https://github.com/emoPointer/FluxVLA-Tron2), combining flower arranging and language-conditioned sorting in a single policy; in competition-time robot trials, joint training outperformed separately trained policies.\n- **Demonstration data.** Planned and collected VR teleoperation demonstrations with the team on the three-camera TRON2 (500 sorting demos across 10 prompts, 600 folding demos), removed corrupted episodes, and flagged low-quality demonstrations.\n- **Targeted corrections.** To fix failed insertions at the vase opening, contributed to 50 DAgger-style correction demos on top of 300 flower-arranging demos, and evaluated intermediate checkpoints with full-task robot rollouts.\n- **Simulation qualifier.** Trained ACT policies for four simulated tasks — see [ACT for Dual-Arm Manipulation](/#projects).",
     },
     {
 // TODO(补充): 起始时间（目前假定 Sep 2025）；论文投稿后补充状态与链接
@@ -117,7 +117,7 @@ export const DATA = {
       dates: "Jul 2026",
       active: true,
       description:
-        "Online qualifier for TRON Camp 2026. Trained Action Chunking with Transformers (ACT) policies for a simulated TRON2 dual-arm robot on four tasks of increasing difficulty, ending with three-bowl stacking — 1,021 demonstrations, 3-GPU DDP, score **64.3**. I also hardened the training loop for long runs: atomic best-checkpoint saving with resume, cosine LR scheduling, configurable validation intervals, and NaN/Inf guards.",
+        "Online qualifier for TRON Camp 2026. Trained Action Chunking with Transformers (ACT) policies for a simulated TRON2 dual-arm robot on four tasks of increasing difficulty, on A100 80GB GPUs, ending with three-bowl stacking — 1,021 demonstrations, 3-GPU DDP, score **64.3**. I also hardened the training loop for long runs: atomic best-checkpoint saving with resume, cosine LR scheduling, configurable validation intervals, and NaN/Inf guards.",
       technologies: ["ACT", "PyTorch", "DDP", "Dual-arm", "Simulation"],
       links: [
         {
@@ -247,7 +247,6 @@ export const DATA = {
       links: [],
     },
     {
-// TODO(补充): 确认获奖作品是否为 TC264 小车控制系统
       title: "Shanghai Undergraduate Electronics Design Contest",
       dates: "November 2022",
       location: "Shanghai",
