@@ -49,7 +49,7 @@ Blog lists use static pagination paths so direct links also work on GitHub Pages
 
 ACT material comes from [troncamp-mani](https://github.com/SORMaker/troncamp-mani). T4 64.3/100 is a reported competition score, not a success rate. This is an ACT reproduction, not a new policy architecture.
 
-The Laser Target Tracking System animation is copied from [2023NUEDC's system overview](https://github.com/SORMaker/2023NUEDC/blob/f3032291f13c001c31809e6b0aaba4a1194269bd/assets/system-overview.gif). It illustrates the source architecture and a tracking model with assumed actuator dynamics; it is not recorded hardware footage. The card displays the complete diagram without cropping.
+The Laser Target Tracking System card uses a photo of the competition hardware from the 2023 TI Cup contest (Shanghai division), supplied by the owner.
 
 The VLN card uses the [published navigation replay](https://github.com/SORMaker/VLN/blob/dcda0da3a1cdd4b1b069386866578308d796233c/assets/homepage/README.md) from a Seq2Seq baseline run. Its caption distinguishes this selected successful validation episode from the LLM-agent experiment described in the project text. The GIF is copied unchanged and displayed without cropping.
 

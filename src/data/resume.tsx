@@ -171,14 +171,13 @@ export const DATA = {
       video: "",
     },
     {
-// TODO(补充): 确认个人分工（K210 视觉 + 通信链路）与队友；可补实物照片或视频
       title: "Laser Target Tracking System",
       href: "https://github.com/SORMaker/2023NUEDC",
       dates: "Aug 2023 - Sep 2023",
       active: true,
       description:
-        "Built in four days for the 2023 National Electronics Design Contest: a green laser automatically chases a moving red-laser target. I wrote the K210 vision pipeline that extracts the target's X/Y position in real time, and the communication link that streams it to the tracking controller. **National First Prize** and Shanghai First Prize.",
-      technologies: ["K210", "Machine Vision", "Embedded Control"],
+        "Built in four days for the 2023 National Electronics Design Contest: a green laser automatically chases a moving red-laser target. Working with my smart-car teammates, I wrote the OpenMV vision pipeline that extracts the target's X/Y position in real time, and the communication link that streams it to the tracking controller. **National First Prize** and Shanghai First Prize.",
+      technologies: ["OpenMV", "Machine Vision", "Embedded Control"],
       links: [
         {
           type: "Source",
@@ -186,9 +185,8 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/projects/laser-system-overview.gif",
-      imageFit: "contain",
-      imageAlt: "Animated system architecture and tracking-model illustration for the 2023 NUEDC laser tracking project",
+      image: "/projects/laser-tracking.webp",
+      imageAlt: "The two pan-tilt laser gimbals with OpenMV camera built for the 2023 TI Cup National Undergraduate Electronic Design Contest",
       video: "",
     },
   ],
