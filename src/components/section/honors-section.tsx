@@ -19,9 +19,9 @@ export default function HonorsSection() {
           <div className="flex flex-col gap-y-3 items-center justify-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Honors &amp; Awards</h2>
             <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">
-              During my undergraduate years, I spent most of my free time building
-              autonomous vehicles and electronic systems for competitions with my
-              teammates. Here are the honors that came out of it.
+              I spent most of my undergraduate years in the lab, building autonomous
+              vehicles and embedded systems with my teammates for national
+              competitions. These are the results.
             </p>
           </div>
         </div>

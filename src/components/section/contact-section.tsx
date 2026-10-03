@@ -24,15 +24,16 @@ export default function ContactSection() {
           Get in Touch
         </h2>
         <p className="mx-auto max-w-lg text-muted-foreground text-balance">
-          I&apos;m looking for internships in robot learning and VLA. Feel
-          free to{" "}
+          I&apos;m looking for internships in embodied AI and VLA. If
+          you&apos;re working on robot learning, I&apos;d love to hear from
+          you.{" "}
           <Link
             href={DATA.contact.social.email.url}
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
           >
-            send me an email
+            Send me an email
           </Link>{" "}
           or find my code on{" "}
           <Link

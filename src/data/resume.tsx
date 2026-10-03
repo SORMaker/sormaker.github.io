@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { BookOpenText, BrainCircuit, Combine, Cpu, HomeIcon } from "lucide-react";
+import { BookOpenText, BrainCircuit, Combine, Cpu, HomeIcon, Terminal } from "lucide-react";
 import { Python } from "@/components/ui/svgs/python";
 import { Cplusplus } from "@/components/ui/svgs/cplusplus";
 import { PyTorch } from "@/components/ui/svgs/pytorch";
@@ -14,9 +14,9 @@ export const DATA = {
   location: "Shenzhen, China",
   locationLink: "https://www.google.com/maps/place/shenzhen",
   description:
-    "Robotics master's student at SUSTech, working at the intersection of robot learning and control.",
+    "Master's student at SUSTech working on robot learning, from VLA policies for dual-arm manipulation to embedded control.",
   summary:
-    "I'm a master's student in Control Science and Engineering at [Southern University of Science and Technology](/#education). My work spans robot learning and control: imitation learning for [dual-arm manipulation](/#projects), LLM agents for vision-and-language navigation, [grasp detection](/#publications), and adaptive estimation. Before SUSTech, I studied Automation at Donghua University, where I built self-balancing bicycles and vision-guided tracking systems that won [national first prizes](/#honors). I'm currently looking for internships in robot learning and vision-language-action (VLA) models.",
+    "I'm a master's student in Control Science and Engineering at [SUSTech](/#education). I'm interested in how robots learn manipulation skills from demonstrations, and in what it takes to make those skills hold up on real hardware.\n\nMost recently, I trained ACT policies and helped train a multi-task VLA policy for the TRON2 dual-arm robot at [TRON Camp 2026](/#work), where our team placed 5th onsite and 2nd in table clearing. Before that, I explored LLM-based planning for vision-and-language navigation and co-authored [MD-Grasp](/#publications), a real-time grasp detection network (PRCV 2025).\n\nMy foundation is in control. At Donghua University, where I ranked in the top 2% of my major, I built a self-balancing autonomous bicycle and a vision-guided laser tracking system — both won [national first prizes](/#honors). I'm currently looking for **internships in embodied AI and VLA**.",
   avatarUrl: "/avatar.webp",
   skills: [
     { name: "Python", icon: Python },
@@ -25,6 +25,7 @@ export const DATA = {
     { name: "ROS", icon: Ros },
     { name: "MATLAB", icon: Matlab },
     { name: "Git", icon: Git },
+    { name: "Linux", icon: Terminal },
     { name: "Imitation Learning", icon: BrainCircuit },
     { name: "Embedded Control", icon: Cpu },
     { name: "Sensor Fusion", icon: Combine },
@@ -52,16 +53,16 @@ export const DATA = {
   },
   work: [
     {
-      company: "TRON Camp 2026 · VLA Track",
+      company: "TRON Camp 2026 · Multi-Task VLA",
       href: "https://github.com/SORMaker/troncamp-mani",
       badges: [],
-      location: "Offline competition",
-      title: "Team LIMY · 5th place",
+      location: "LimX Dynamics",
+      title: "Team LimY · 5th overall (71.56), 2nd in table clearing",
       logoUrl: "/organizations/limx-dynamics.svg",
       start: "Aug 2026",
       end: "Aug 2026",
       description:
-        "Led data collection for our VLA policy, including corrective demonstrations that targeted failures in the final placement stage of the flower-arranging task. Our team placed 5th in the offline competition.",
+        "Qualified through the online simulation stage, then competed onsite with the TRON2 dual-arm robot.\n\n- **One policy, two tasks.** Contributed to 8-GPU [FluxVLA](https://github.com/emoPointer/FluxVLA-Tron2) training that combined flower arranging and language-conditioned sorting in a single policy; in competition-time robot trials, joint training outperformed separately trained policies.\n- **Demonstration data.** Planned and collected VR teleoperation demonstrations with the team on the three-camera TRON2 (500 sorting demos across 10 prompts, 600 folding demos), removed corrupted episodes, and flagged low-quality demonstrations.\n- **Targeted corrections.** To fix failed insertions at the vase opening, contributed to 50 DAgger-style correction demos on top of 300 flower-arranging demos, and evaluated intermediate checkpoints with full-task robot rollouts.\n- **Simulation qualifier.** Trained ACT policies for four simulated tasks — see [ACT for Dual-Arm Manipulation](/#projects).",
     },
     {
       company: "Frequency Estimation with an Unknown Bias",
@@ -73,7 +74,19 @@ export const DATA = {
       start: "Sep 2025",
       end: null,
       description:
-        "Globally exponential estimation of the unknown frequencies of discrete-time multi-tone sinusoids with an unknown constant bias. I extended a two-filter adaptive estimator with a modified characteristic-polynomial parameterization, proved persistent excitation of the regressor (including the zero-bias case), and showed exponential convergence under gain conditions that, after normalization, do not depend on signal amplitudes or initial states. Comparative simulations cover bias handling, large initial states, and increased amplitudes.",
+        "Adaptive estimation of the unknown frequencies of discrete-time multi-tone sinusoids corrupted by an unknown constant bias.\n\n- Extended a two-filter adaptive estimator with a modified characteristic-polynomial parameterization.\n- Proved persistent excitation of the regressor, including the zero-bias case, and global exponential convergence of the estimation errors; after normalization, the gain conditions no longer depend on signal amplitudes or initial states.\n- Validated the design in comparative simulations covering bias handling, large initial states, and increased amplitudes.",
+    },
+    {
+      company: "Science & Innovation Lab",
+      href: "https://english.dhu.edu.cn/",
+      badges: [],
+      location: "Shanghai, China",
+      title: "Student Lead · Donghua University",
+      logoUrl: "/education/donghua.png",
+      start: "Sep 2023",
+      end: "Jul 2024",
+      description:
+        "Led Donghua's student science-and-innovation lab.\n\n- Trained more than 50 new members.\n- Organized college- and university-level smart-car competitions and lab open days for 100+ students and visitors.\n- Managed the lab's budget, reimbursements, and equipment purchasing.",
     },
   ],
   education: [
@@ -88,7 +101,7 @@ export const DATA = {
     {
       school: "Donghua University",
       href: "https://english.dhu.edu.cn/",
-      degree: "B.Eng. in Automation",
+      degree: "B.Eng. in Automation · GPA 4.21/5.00, top 2%",
       logoUrl: "/education/donghua.png",
       start: "Sep 2021",
       end: "Jun 2025",
@@ -101,8 +114,8 @@ export const DATA = {
       dates: "2026",
       active: true,
       description:
-        "Trained Action Chunking with Transformers (ACT) policies for a simulated Tron2 dual-arm robot on four tasks of increasing difficulty, from bottle adjustment to three-bowl stacking. I configured the tasks, converted expert demonstrations into the ACT format, and ran training and evaluation. Score of **64.3 / 100** on the final stacking task.",
-      technologies: ["ACT", "PyTorch", "Dual-arm", "Simulation"],
+        "Online qualifier for TRON Camp 2026. Trained Action Chunking with Transformers (ACT) policies for a simulated TRON2 dual-arm robot on four tasks of increasing difficulty, ending with three-bowl stacking — 1,021 demonstrations, 3-GPU DDP, score **64.3**. I also hardened the training loop for long runs: atomic best-checkpoint saving with resume, cosine LR scheduling, configurable validation intervals, and NaN/Inf guards.",
+      technologies: ["ACT", "PyTorch", "DDP", "Dual-arm", "Simulation"],
       links: [
         {
           type: "Source",
@@ -119,8 +132,8 @@ export const DATA = {
       dates: "Jan 2025 - Jun 2025",
       active: true,
       description:
-        "Starting from an LSTM-with-attention Seq2Seq baseline in the Matterport3D simulator, I replaced the learned policy with an LLM agent and encoded the navigation graph's node connectivity as text prompts to improve spatial reasoning. The LLM agent achieved a **2.3×** higher success rate in unseen environments. This work later grew into [MD-Grasp](/#publications), published at PRCV 2025.",
-      technologies: ["Python", "LLM Agents", "Matterport3D", "Seq2Seq"],
+        "Project lead. Built an LSTM-attention Seq2Seq baseline in Matterport3D and raised its validation success rate by **11 points** with student-forcing training. I then replaced the learned policy with an LLM planner, giving it the scene graph's node connectivity as text so it could reason over explicit topology — reaching **2.3×** the baseline success rate in unseen environments. The work later grew into [MD-Grasp](/#publications) (PRCV 2025).",
+      technologies: ["PyTorch", "LLM Agents", "Matterport3D", "Seq2Seq"],
       links: [
         {
           type: "Source",
@@ -137,11 +150,11 @@ export const DATA = {
     {
       title: "Autonomous Off-road Bicycle",
       href: "https://github.com/SORMaker/CH32-Bike-Overland",
-      dates: "Mar 2023 - Sep 2023",
+      dates: "Mar 2023 - Aug 2023",
       active: true,
       description:
-        "A self-balancing bicycle that navigates outdoor terrain autonomously. On a RISC-V CH32V307 microcontroller, I implemented a three-stage cascade PID balance controller with angular-rate feedback to suppress servo jitter, Mahony attitude estimation, and GPS–IMU fusion for outdoor localization. **National First Prize**, 3rd place nationally.",
-      technologies: ["CH32V307", "Cascade PID", "Sensor Fusion", "Embedded"],
+        "A self-balancing bicycle that follows outdoor routes on its own, with all control running on a RISC-V CH32V307 microcontroller. I co-developed the control software: Mahony attitude estimation (less noisy than the IMU's on-chip fusion), GPS–IMU localization, Stanley path tracking, and cascaded PID balance control, plus angular-rate feedback that suppresses steering-servo jitter at high speed. **National First Prize**, 3rd place nationally.",
+      technologies: ["CH32V307", "Cascade PID", "Stanley", "Sensor Fusion"],
       links: [
         {
           type: "Source",
@@ -158,7 +171,7 @@ export const DATA = {
       dates: "Aug 2023 - Sep 2023",
       active: true,
       description:
-        "A vision-guided system in which a green laser automatically tracks a moving red-laser target. I implemented target detection on K210 to extract the target's real-time X/Y coordinates and built the communication link between the vision module and the tracking controller. **National First Prize**, Electronics Design Contest.",
+        "Built in four days for the 2023 National Electronics Design Contest: a green laser automatically chases a moving red-laser target. I wrote the K210 vision pipeline that extracts the target's X/Y position in real time, and the communication link that streams it to the tracking controller. **National First Prize** and Shanghai First Prize.",
       technologies: ["K210", "Machine Vision", "Embedded Control"],
       links: [
         {
@@ -224,10 +237,17 @@ export const DATA = {
       ],
     },
     {
+      title: "China Undergraduate Mathematical Contest in Modeling",
+      dates: "2023",
+      location: "Shanghai",
+      description: "Shanghai Second Prize.",
+      links: [],
+    },
+    {
       title: "Shanghai Undergraduate Electronics Design Contest",
       dates: "November 2022",
       location: "Shanghai",
-      description: "Shanghai First Prize.",
+      description: "Shanghai First Prize with a TC264-based vehicle control system.",
       win: "First Prize",
       links: [
         {
@@ -239,9 +259,9 @@ export const DATA = {
     },
     {
       title: "Excellent Student",
-      dates: "2021 - 2023",
+      dates: "2021 - 2024",
       location: "Donghua University",
-      description: "",
+      description: "Three consecutive years.",
       links: [],
     },
   ],

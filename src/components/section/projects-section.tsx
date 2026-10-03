@@ -25,8 +25,9 @@ export default function ProjectsSection() {
                     <div className="flex flex-col gap-y-3 items-center justify-center">
                         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Things I&apos;ve built</h2>
                         <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">
-                            From imitation learning in simulation to embedded control on
-                            competition vehicles. Here are a few projects I&apos;ve worked on.
+                            From VLA policies on a dual-arm robot to controllers running on a
+                            microcontroller: projects where I took learning and control from
+                            idea to a working system.
                         </p>
                     </div>
                 </div>
