@@ -176,8 +176,8 @@ export const DATA = {
       dates: "Aug 2023 - Sep 2023",
       active: true,
       description:
-        "Built in four days for the 2023 National Electronics Design Contest: a green laser automatically chases a moving red-laser target. Working with my smart-car teammates, I wrote the OpenMV vision pipeline that extracts the target's X/Y position in real time, and the communication link that streams it to the tracking controller. **National First Prize** and Shanghai First Prize.",
-      technologies: ["OpenMV", "Machine Vision", "Embedded Control"],
+        "Built in four days for the 2023 National Electronics Design Contest: a green laser automatically chases a moving red-laser target. Working with my smart-car teammates, I wrote the vision side of both pan-tilt gimbals, one on OpenMV and one on K210, extracting laser-spot X/Y positions in real time, plus the UART link that streams them to the gimbal controllers. **National First Prize** and Shanghai First Prize.",
+      technologies: ["OpenMV", "K210", "Machine Vision", "Embedded Control"],
       links: [
         {
           type: "Source",
@@ -186,7 +186,7 @@ export const DATA = {
         },
       ],
       image: "/projects/laser-tracking.webp",
-      imageAlt: "The two pan-tilt laser gimbals with OpenMV camera built for the 2023 TI Cup National Undergraduate Electronic Design Contest",
+      imageAlt: "The two pan-tilt laser gimbals, with OpenMV and K210 cameras, built for the 2023 TI Cup National Undergraduate Electronic Design Contest",
       video: "",
     },
   ],
