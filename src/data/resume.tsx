@@ -55,7 +55,6 @@ export const DATA = {
   },
   work: [
     {
-// TODO(补充): 线下 VLA 用的基础模型与微调方式
       company: "TRON Camp 2026 · Multi-Task VLA",
       href: "https://github.com/SORMaker/troncamp-mani",
       badges: [],
@@ -65,23 +64,22 @@ export const DATA = {
       start: "Jul 2026",
       end: "Aug 2026",
       description:
-        "Qualified through the online simulation stage (Jul 4–24), then competed onsite (Aug 3–7) with the TRON2 dual-arm robot.\n\n- **One policy, two tasks.** Contributed to 8-GPU [FluxVLA](https://github.com/emoPointer/FluxVLA-Tron2) training that combined flower arranging and language-conditioned sorting in a single policy; in competition-time robot trials, joint training outperformed separately trained policies.\n- **Demonstration data.** Planned and collected VR teleoperation demonstrations with the team on the three-camera TRON2 (500 sorting demos across 10 prompts, 600 folding demos), removed corrupted episodes, and flagged low-quality demonstrations.\n- **Targeted corrections.** To fix failed insertions at the vase opening, contributed to 50 DAgger-style correction demos on top of 300 flower-arranging demos, and evaluated intermediate checkpoints with full-task robot rollouts.\n- **Simulation qualifier.** Trained ACT policies for four simulated tasks — see [ACT for Dual-Arm Manipulation](/#projects).",
+        "Qualified through the online simulation stage (Jul 4–24), then competed onsite (Aug 3–7) with the TRON2 dual-arm robot.\n\n- **One policy, two tasks.** Contributed to 8-GPU LoRA fine-tuning of a π0.5 VLA with [FluxVLA](https://github.com/emoPointer/FluxVLA-Tron2), combining flower arranging and language-conditioned sorting in a single policy; in competition-time robot trials, joint training outperformed separately trained policies.\n- **Demonstration data.** Planned and collected VR teleoperation demonstrations with the team on the three-camera TRON2 (500 sorting demos across 10 prompts, 600 folding demos), removed corrupted episodes, and flagged low-quality demonstrations.\n- **Targeted corrections.** To fix failed insertions at the vase opening, contributed to 50 DAgger-style correction demos on top of 300 flower-arranging demos, and evaluated intermediate checkpoints with full-task robot rollouts.\n- **Simulation qualifier.** Trained ACT policies for four simulated tasks — see [ACT for Dual-Arm Manipulation](/#projects).",
     },
     {
-// TODO(补充): 导师姓名、起始时间（目前假定 Sep 2025）、投稿/预印本状态与链接
+// TODO(补充): 起始时间（目前假定 Sep 2025）；论文投稿后补充状态与链接
       company: "Frequency Estimation with an Unknown Bias",
       href: "https://www.sustech.edu.cn/en/",
       badges: [],
       location: "Shenzhen, China",
-      title: "Research project · SUSTech",
+      title: "Research project · SUSTech · Advisor: Tao Liu",
       logoUrl: "/education/sustech.png",
       start: "Sep 2025",
       end: null,
       description:
-        "Adaptive estimation of the unknown frequencies of discrete-time multi-tone sinusoids corrupted by an unknown constant bias.\n\n- Extended a two-filter adaptive estimator with a modified characteristic-polynomial parameterization.\n- Proved persistent excitation of the regressor, including the zero-bias case, and global exponential convergence of the estimation errors; after normalization, the gain conditions no longer depend on signal amplitudes or initial states.\n- Validated the design in comparative simulations covering bias handling, large initial states, and increased amplitudes.",
+        "Adaptive estimation of the unknown frequencies of discrete-time multi-tone sinusoids corrupted by an unknown constant bias.\n\n- Extended a two-filter adaptive estimator with a modified characteristic-polynomial parameterization.\n- Proved persistent excitation of the regressor, including the zero-bias case, and global exponential convergence of the estimation errors; after normalization, the gain conditions no longer depend on signal amplitudes or initial states.\n- Validated the design in comparative simulations covering bias handling, large initial states, and increased amplitudes.\n\nThe manuscript is in preparation with my advisor.",
     },
     {
-// TODO(补充): 「科创未来实验室」的官方英文名与链接（目前链接到东华官网）
       company: "Science & Innovation Lab",
       href: "https://english.dhu.edu.cn/",
       badges: [],
@@ -241,7 +239,7 @@ export const DATA = {
       ],
     },
     {
-// TODO(补充): 具体月份与所做题目
+// TODO(补充): 具体月份与所做题目（暂时记不清）
       title: "China Undergraduate Mathematical Contest in Modeling",
       dates: "2023",
       location: "Shanghai",
