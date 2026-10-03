@@ -17,6 +17,7 @@ export const DATA = {
     "Master's student at SUSTech working on robot learning, from VLA policies for dual-arm manipulation to embedded control.",
   summary:
     "I'm a master's student in Control Science and Engineering at [SUSTech](/#education). I'm interested in how robots learn manipulation skills from demonstrations, and in what it takes to make those skills hold up on real hardware.\n\nMost recently, I trained ACT policies and helped train a multi-task VLA policy for the TRON2 dual-arm robot at [TRON Camp 2026](/#work), where our team placed 5th onsite and 2nd in table clearing. Before that, I explored LLM-based planning for vision-and-language navigation and co-authored [MD-Grasp](/#publications), a real-time grasp detection network (PRCV 2025).\n\nMy foundation is in control. At Donghua University, where I ranked in the top 2% of my major, I built a self-balancing autonomous bicycle and a vision-guided laser tracking system — both won [national first prizes](/#honors). I'm currently looking for **internships in embodied AI and VLA**.",
+// TODO(补充): 头像目前是卡通狗，求职用可换成真人照片
   avatarUrl: "/avatar.webp",
   skills: [
     { name: "Python", icon: Python },
@@ -34,6 +35,7 @@ export const DATA = {
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog/", icon: BookOpenText, label: "Blog" },
   ],
+// TODO(补充): 可补充 LinkedIn / Google Scholar 等主页，以及简历 PDF 下载按钮
   contact: {
     email: "xiezy3@gmail.com",
     social: {
@@ -53,6 +55,7 @@ export const DATA = {
   },
   work: [
     {
+// TODO(补充): 线上选拔开始时间（目前只写了 Aug 2026）；线下 VLA 用的基础模型与微调方式
       company: "TRON Camp 2026 · Multi-Task VLA",
       href: "https://github.com/SORMaker/troncamp-mani",
       badges: [],
@@ -65,6 +68,7 @@ export const DATA = {
         "Qualified through the online simulation stage, then competed onsite with the TRON2 dual-arm robot.\n\n- **One policy, two tasks.** Contributed to 8-GPU [FluxVLA](https://github.com/emoPointer/FluxVLA-Tron2) training that combined flower arranging and language-conditioned sorting in a single policy; in competition-time robot trials, joint training outperformed separately trained policies.\n- **Demonstration data.** Planned and collected VR teleoperation demonstrations with the team on the three-camera TRON2 (500 sorting demos across 10 prompts, 600 folding demos), removed corrupted episodes, and flagged low-quality demonstrations.\n- **Targeted corrections.** To fix failed insertions at the vase opening, contributed to 50 DAgger-style correction demos on top of 300 flower-arranging demos, and evaluated intermediate checkpoints with full-task robot rollouts.\n- **Simulation qualifier.** Trained ACT policies for four simulated tasks — see [ACT for Dual-Arm Manipulation](/#projects).",
     },
     {
+// TODO(补充): 导师姓名、起始时间（目前假定 Sep 2025）、投稿/预印本状态与链接
       company: "Frequency Estimation with an Unknown Bias",
       href: "https://www.sustech.edu.cn/en/",
       badges: [],
@@ -77,6 +81,7 @@ export const DATA = {
         "Adaptive estimation of the unknown frequencies of discrete-time multi-tone sinusoids corrupted by an unknown constant bias.\n\n- Extended a two-filter adaptive estimator with a modified characteristic-polynomial parameterization.\n- Proved persistent excitation of the regressor, including the zero-bias case, and global exponential convergence of the estimation errors; after normalization, the gain conditions no longer depend on signal amplitudes or initial states.\n- Validated the design in comparative simulations covering bias handling, large initial states, and increased amplitudes.",
     },
     {
+// TODO(补充): 「科创未来实验室」的官方英文名与链接（目前链接到东华官网）
       company: "Science & Innovation Lab",
       href: "https://english.dhu.edu.cn/",
       badges: [],
@@ -166,6 +171,7 @@ export const DATA = {
       video: "",
     },
     {
+// TODO(补充): 确认个人分工（K210 视觉 + 通信链路）与队友；可补实物照片或视频
       title: "Laser Target Tracking System",
       href: "https://github.com/SORMaker/2023NUEDC",
       dates: "Aug 2023 - Sep 2023",
@@ -237,6 +243,7 @@ export const DATA = {
       ],
     },
     {
+// TODO(补充): 具体月份与所做题目
       title: "China Undergraduate Mathematical Contest in Modeling",
       dates: "2023",
       location: "Shanghai",
@@ -244,6 +251,7 @@ export const DATA = {
       links: [],
     },
     {
+// TODO(补充): 确认获奖作品是否为 TC264 小车控制系统
       title: "Shanghai Undergraduate Electronics Design Contest",
       dates: "November 2022",
       location: "Shanghai",
@@ -267,6 +275,7 @@ export const DATA = {
   ],
   publications: [
     {
+// TODO(补充): 论文 DOI / PDF 链接
       title:
         "MD-Grasp: Background-Adaptive Grasp Detection for Real-time Robotic Manipulation Using Mamba and Attention Fusion Network",
       authors:
