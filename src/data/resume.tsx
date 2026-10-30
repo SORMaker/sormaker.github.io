@@ -64,7 +64,7 @@ export const DATA = {
       start: "Jul 2026",
       end: "Aug 2026",
       description:
-        "Qualified through the online simulation stage (Jul 4–24), then competed onsite (Aug 3–7) with the TRON2 dual-arm robot.\n\n- **Team approach.** The team LoRA fine-tuned a π0.5 VLA on 8× RTX PRO 6000 GPUs with [FluxVLA](https://github.com/emoPointer/FluxVLA-Tron2), combining flower arranging and language-conditioned sorting in a single policy; in competition-time robot trials, joint training outperformed separately trained policies. To fix failed insertions at the vase opening, the team added 50 DAgger-style correction demos on top of 300 flower-arranging demos.\n- **Demonstration data.** Collected VR teleoperation demonstrations with the team on the three-camera TRON2 (500 sorting demos across 10 prompts, 600 folding demos), and removed corrupted episodes before training.\n- **Simulation qualifier (individual).** Trained ACT policies for four simulated tasks — see [ACT for Dual-Arm Manipulation](/#projects).",
+        "Qualified through the online simulation stage (Jul 4–24), then competed onsite (Aug 3–7) with the TRON2 dual-arm robot.\n\n- **Team work.** The team fine-tuned one π0.5 model with LoRA on two tasks, flower arranging and language-conditioned sorting, using [FluxVLA](https://github.com/emoPointer/FluxVLA-Tron2) on 8× RTX PRO 6000 GPUs. It beat separately trained models in competition trials. To fix failed vase insertions, the team added 50 correction demos to the 300 flower-arranging demos.\n- **Data.** Collected VR teleoperation demos with the team (500 for sorting across 10 prompts, 600 for folding) and removed corrupted episodes.\n- **Online qualifier (individual).** Trained ACT policies for four simulated tasks. See [ACT for Dual-Arm Manipulation](/#projects).",
     },
     {
 // TODO(补充): 起始时间（目前假定 Sep 2025）；论文投稿后补充状态与链接
@@ -77,7 +77,7 @@ export const DATA = {
       start: "Sep 2025",
       end: null,
       description:
-        "Adaptive estimation of the unknown frequencies of discrete-time multi-tone sinusoids corrupted by an unknown constant bias.\n\n- Extended a two-filter adaptive estimator with a modified characteristic-polynomial parameterization.\n- Proved persistent excitation of the regressor, including the zero-bias case, and global exponential convergence of the estimation errors; after normalization, the gain conditions no longer depend on signal amplitudes or initial states.\n- Validated the design in comparative simulations covering bias handling, large initial states, and increased amplitudes.\n\nThe manuscript, co-authored with my supervisor, is under review.",
+        "Adaptive estimation of the unknown frequencies of discrete-time multi-tone sinusoids with an unknown constant bias.\n\n- Extended a two-filter adaptive estimator with a new parameterization of the characteristic polynomial.\n- Proved that the regressor is persistently exciting, including when the bias is zero, and that the estimation errors converge globally and exponentially. After normalization, the gain conditions no longer depend on signal amplitude or initial state.\n- Tested the design in simulations with a bias, large initial states, and larger amplitudes.\n\nThe manuscript, co-authored with my supervisor, is under review.",
     },
     {
       company: "Science & Innovation Lab",
@@ -89,7 +89,7 @@ export const DATA = {
       start: "Sep 2023",
       end: "Jul 2024",
       description:
-        "Led Donghua's student science-and-innovation lab.\n\n- Trained more than 50 new members.\n- Organized college- and university-level smart-car competitions and lab open days for 100+ students and visitors.\n- Managed the lab's budget, reimbursements, and equipment purchasing.",
+        "Led Donghua's student science-and-innovation lab.\n\n- Trained 50+ new members.\n- Organized smart-car competitions and lab open days for 100+ people.\n- Managed the lab budget, reimbursements, and purchases.",
     },
   ],
   education: [
@@ -117,7 +117,7 @@ export const DATA = {
       dates: "Jul 2026",
       active: true,
       description:
-        "Online qualifier for TRON Camp 2026. Trained Action Chunking with Transformers (ACT) policies for a simulated TRON2 dual-arm robot on four tasks of increasing difficulty from one shared codebase, on A100 80GB GPUs, scoring 59, 66, 74 and **64.3**. The hardest task, three-bowl stacking, used 1,021 demonstrations and 3-GPU DDP. I also hardened the training loop for long runs: atomic best-checkpoint saving with resume, cosine LR scheduling, configurable validation intervals, and NaN/Inf guards.",
+        "Online qualifier for TRON Camp 2026, done on my own. I trained ACT (Action Chunking with Transformers) policies for four simulated TRON2 tasks, all in one codebase, on A100 GPUs. Scores: 59, 66, 74 and **64.3**. The hardest task, stacking three bowls, used 1,021 demos and 3 GPUs. I also made long training runs resumable: the loop saves checkpoints, writes the best model to disk as soon as it improves, decays the learning rate, and logs NaN/Inf losses.",
       technologies: ["ACT", "PyTorch", "DDP", "Dual-arm", "Simulation"],
       links: [
         {
@@ -135,7 +135,7 @@ export const DATA = {
       dates: "Jan 2025 - Jun 2025",
       active: true,
       description:
-        "Project lead. Trained an LSTM-attention Seq2Seq agent on R2R in the Matterport3D simulator; student-forcing training raised its validation success rate by **11 points** over teacher forcing. I then reproduced [MapGPT](https://arxiv.org/abs/2401.07314) (ACL 2024), a GPT-4o planner prompted with a topological map of visited viewpoints, reaching **2.3×** the Seq2Seq success rate in unseen environments, and built top-down trajectory visualizations to analyze its failures. The work later grew into [MD-Grasp](/#publications) (PRCV 2025).",
+        "Project lead. I trained a Seq2Seq agent (LSTM with attention) on R2R in the Matterport3D simulator. Student forcing raised its validation success rate by **11 points** over teacher forcing. I then reproduced [MapGPT](https://arxiv.org/abs/2401.07314) (ACL 2024), which plans with GPT-4o and a map of visited viewpoints. It reached **2.3×** the Seq2Seq success rate in unseen environments. I also built top-down trajectory views to study its failures. The work later grew into [MD-Grasp](/#publications) (PRCV 2025).",
       technologies: ["PyTorch", "LLM Agents", "Matterport3D", "Seq2Seq"],
       links: [
         {
@@ -156,7 +156,7 @@ export const DATA = {
       dates: "Mar 2023 - Aug 2023",
       active: true,
       description:
-        "A self-balancing bicycle that follows outdoor routes on its own, with all control running on a RISC-V CH32V307 microcontroller. On a team of three, I built the state estimation — GNSS and magnetometer drivers, ellipsoid-fitting magnetometer calibration, Mahony attitude estimation (less noisy than the IMU's on-chip fusion), and GPS–IMU fusion — and designed the balance and steering control: a three-loop cascade on the reaction flywheel (speed, roll angle, roll rate), and a cascaded steering loop with yaw-rate negative feedback that suppresses servo jitter. The team's route following used B-spline route optimization and Stanley path tracking. **National First Prize**, 3rd place nationally.",
+        "A self-balancing bicycle that follows outdoor routes by itself, with all control on a RISC-V CH32V307 microcontroller. We were a team of three. I wrote the state estimation: GNSS and magnetometer drivers, magnetometer calibration (ellipsoid fitting), Mahony attitude estimation, and GPS–IMU fusion. I also designed the control: a three-loop cascade on the flywheel for balance (speed, roll angle, roll rate), and a cascaded steering loop with yaw-rate feedback to reduce servo jitter. The team used B-spline route planning and Stanley path tracking. **National First Prize**, 3rd place nationally.",
       technologies: ["CH32V307", "Cascade PID", "Stanley", "Sensor Fusion"],
       links: [
         {
@@ -174,7 +174,7 @@ export const DATA = {
       dates: "Aug 2023 - Sep 2023",
       active: true,
       description:
-        "Built in four days for the 2023 National Electronics Design Contest: a green laser automatically chases a moving red-laser target. Working with my smart-car teammates, I wrote the vision side of both pan-tilt gimbals, one on OpenMV and one on K210, extracting laser-spot X/Y positions in real time, plus the UART link that streams them to the gimbal controllers. **National First Prize** and Shanghai First Prize.",
+        "Built in four days for the 2023 National Electronics Design Contest. One pan-tilt gimbal draws a path with a red laser; the other follows it with a green laser. With my smart-car teammates, I wrote the vision code for both gimbals (OpenMV and K210). It finds the laser spot in real time and sends its position to the gimbal controllers over UART. **National First Prize** and Shanghai First Prize.",
       technologies: ["OpenMV", "K210", "Machine Vision", "Embedded Control"],
       links: [
         {
