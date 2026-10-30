@@ -16,7 +16,7 @@ export const DATA = {
   description:
     "Master's student at SUSTech working on robot learning, from VLA policies for dual-arm manipulation to embedded control.",
   summary:
-    "I'm a master's student in Control Science and Engineering at [SUSTech](/#education). I'm interested in how robots learn manipulation skills from demonstrations, and in what it takes to make those skills hold up on real hardware.\n\nMost recently, I trained ACT policies and collected teleoperation data for a multi-task VLA policy on the TRON2 dual-arm robot at [TRON Camp 2026](/#work), where our team placed 5th onsite and 2nd in table clearing. Before that, I explored LLM-based planning for vision-and-language navigation and co-authored [MD-Grasp](/#publications), a real-time grasp detection network (PRCV 2025).\n\nMy foundation is in control. At Donghua University, where I ranked in the top 2% of my major, I built a self-balancing autonomous bicycle and a vision-guided laser tracking system — both won [national first prizes](/#honors). I'm currently looking for **internships in embodied AI and VLA**.",
+    "I'm a master's student in Control Science and Engineering at [SUSTech](/#education). I'm interested in how robots learn manipulation skills from demonstrations, and in what it takes to make those skills hold up on real hardware.\n\nMost recently, I trained ACT policies and collected teleoperation data for a multi-task VLA policy on the TRON2 dual-arm robot at [TRON Camp 2026](/#work), where our team placed 2nd in table clearing and 5th onsite. Before that, I explored LLM-based planning for vision-and-language navigation and co-authored [MD-Grasp](/#publications), a real-time grasp detection network (PRCV 2025).\n\nMy foundation is in control. At Donghua University, where I ranked in the top 2% of my major, I built a self-balancing autonomous bicycle and a vision-guided laser tracking system — both won [national first prizes](/#honors). I'm currently looking for **internships in embodied AI and VLA**.",
 // TODO(补充): 头像目前是卡通狗，求职用可换成真人照片
   avatarUrl: "/avatar.webp",
   skills: [
@@ -59,7 +59,7 @@ export const DATA = {
       href: "https://github.com/SORMaker/troncamp-mani",
       badges: [],
       location: "LimX Dynamics",
-      title: "Team LimY · 5th overall (71.56), 2nd in table clearing",
+      title: "Team LimY · 2nd in table clearing, 5th overall (71.56)",
       logoUrl: "/organizations/limx-dynamics.svg",
       start: "Jul 2026",
       end: "Aug 2026",
