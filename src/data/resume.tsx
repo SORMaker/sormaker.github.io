@@ -72,12 +72,12 @@ export const DATA = {
       href: "https://www.sustech.edu.cn/en/",
       badges: [],
       location: "Shenzhen, China",
-      title: "Research project · SUSTech · Advisor: Tao Liu",
+      title: "Research project · SUSTech · Supervised by Prof. LIU Tao",
       logoUrl: "/education/sustech.png",
       start: "Sep 2025",
       end: null,
       description:
-        "Adaptive estimation of the unknown frequencies of discrete-time multi-tone sinusoids corrupted by an unknown constant bias.\n\n- Extended a two-filter adaptive estimator with a modified characteristic-polynomial parameterization.\n- Proved persistent excitation of the regressor, including the zero-bias case, and global exponential convergence of the estimation errors; after normalization, the gain conditions no longer depend on signal amplitudes or initial states.\n- Validated the design in comparative simulations covering bias handling, large initial states, and increased amplitudes.\n\nThe manuscript, co-authored with my advisor, is under review.",
+        "Adaptive estimation of the unknown frequencies of discrete-time multi-tone sinusoids corrupted by an unknown constant bias.\n\n- Extended a two-filter adaptive estimator with a modified characteristic-polynomial parameterization.\n- Proved persistent excitation of the regressor, including the zero-bias case, and global exponential convergence of the estimation errors; after normalization, the gain conditions no longer depend on signal amplitudes or initial states.\n- Validated the design in comparative simulations covering bias handling, large initial states, and increased amplitudes.\n\nThe manuscript, co-authored with my supervisor, is under review.",
     },
     {
       company: "Science & Innovation Lab",
