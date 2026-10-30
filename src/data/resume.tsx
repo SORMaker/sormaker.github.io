@@ -64,7 +64,7 @@ export const DATA = {
       start: "Jul 2026",
       end: "Aug 2026",
       description:
-        "Qualified through the online simulation stage (Jul 4–24), then competed onsite (Aug 3–7) with the TRON2 dual-arm robot.\n\n- **Team work.** The team fine-tuned one π0.5 model with LoRA on two tasks, flower arranging and language-conditioned sorting, using [FluxVLA](https://github.com/emoPointer/FluxVLA-Tron2) on 8× RTX PRO 6000 GPUs. It beat separately trained models in competition trials. To fix failed vase insertions, the team added 50 correction demos to the 300 flower-arranging demos.\n- **Data.** Collected VR teleoperation demos with the team (500 for sorting across 10 prompts, 600 for folding) and removed corrupted episodes.\n- **Online qualifier (individual).** Trained ACT policies for four simulated tasks. See [ACT for Dual-Arm Manipulation](/#projects).",
+        "Qualified through the online simulation stage (Jul 4–24), then competed onsite (Aug 3–7) with the TRON2 dual-arm robot.\n\n- **Team work.** The team fine-tuned one π0.5 model with LoRA for two tasks, flower insertion and language-conditioned object sorting, using [FluxVLA](https://github.com/emoPointer/FluxVLA-Tron2) on 8× RTX PRO 6000 GPUs. The multi-task model outperformed single-task models. The team used DAgger to collect 50 correction demos for failed insertions, on top of 300 flower-insertion demos.\n- **Data.** Collected VR teleoperation demos with the team (500 for sorting across 10 prompts, 600 for folding) and removed corrupted episodes.\n- **Online qualifier (individual).** Trained ACT policies for four simulated tasks. See [ACT for Dual-Arm Manipulation](/#projects).",
     },
     {
 // TODO(补充): 起始时间（目前假定 Sep 2025）；论文投稿后补充状态与链接
