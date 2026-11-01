@@ -1,3 +1,11 @@
+---
+title: Lecture 21: Eigenvalues and eigenvectors
+updated: 2025-10-17
+parent: linear-algebra
+order: 20
+source: docs/Linear-Algebra-MIT/Lecture21.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-21-eigenvalues-and-eigenvectors/)
 
 # 特征方程

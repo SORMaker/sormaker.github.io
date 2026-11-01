@@ -1,3 +1,11 @@
+---
+title: 同时运行多个Future
+updated: 2025-10-17
+parent: rust-async-await
+order: 5
+source: docs/Rust-Note/async-await/同时运行多个Future.md
+---
+
 # join!
 
 `futures` 包中提供了很多实用的工具，其中一个就是 `join!` 宏，它允许我们同时等待多个不同 `Future` 的完成，且可以并发地运行这些 `Future`。

@@ -27,66 +27,43 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
 }
 
 @layer components {
-  .blog-toc {
-    @apply w-fit max-w-full rounded-lg border border-border bg-muted/20 px-3 py-2 text-sm;
-  }
-
-  .blog-toc summary {
-    @apply cursor-pointer select-none font-medium text-muted-foreground marker:text-muted-foreground hover:text-foreground;
-  }
-
-  .blog-prose {
-    min-width: 0;
+  .note-prose {
     overflow-wrap: anywhere;
   }
 
-  .blog-prose .blog-code {
-    max-width: 100%;
+  .note-prose .note-code {
     overflow: hidden;
   }
 
-  .blog-prose .blog-code pre {
-    @apply m-0! max-w-full overflow-x-auto rounded-none! border-0! bg-transparent! p-4! pr-14! font-mono! leading-relaxed;
+  .note-prose .note-code pre {
+    @apply m-0! overflow-x-auto rounded-none! border-0! bg-transparent! p-4! pr-14! font-mono! leading-relaxed;
   }
 
-  .blog-prose .blog-code pre code {
+  .note-prose .note-code pre code {
     @apply m-0! border-0! bg-transparent! p-0! text-[13px]! font-mono! leading-relaxed! text-foreground!;
     white-space: pre;
   }
 
-  .blog-prose .blog-code [style*="--shiki-light"] {
+  /* rehype-pretty-code writes both themes as CSS variables on each token. */
+  .note-prose .note-code [style*="--shiki-light"] {
     color: var(--shiki-light) !important;
-    background-color: transparent !important;
   }
 
-  .dark .blog-prose .blog-code [style*="--shiki-dark"] {
+  .dark .note-prose .note-code [style*="--shiki-dark"] {
     color: var(--shiki-dark) !important;
   }
 
-  .blog-prose .katex-display {
-    max-width: 100%;
+  .note-prose .katex-display {
     overflow-x: auto;
     overflow-y: hidden;
     padding-bottom: 0.25rem;
   }
 
-  .blog-prose :not(.katex-display) > .katex {
+  /* Long inline formulas scroll instead of widening the page on phones. */
+  .note-prose :not(.katex-display) > .katex {
     display: inline-block;
     max-width: 100%;
     overflow-x: auto;
@@ -94,14 +71,9 @@
     vertical-align: middle;
   }
 
-  .blog-prose > div.overflow-x-auto {
-    max-width: 100%;
-  }
-
-  .blog-prose :where(table) {
+  .note-prose :where(table) {
     width: max-content;
     min-width: 100%;
-    max-width: none;
   }
 }
 
@@ -125,19 +97,6 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {
@@ -159,19 +118,6 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
 }
 
 @layer base {
@@ -183,20 +129,8 @@
     @apply bg-background text-foreground;
   }
 
-  /* Shiki dual theme support */
-  .shiki,
-  .shiki span {
-    color: var(--shiki-light);
-    background-color: transparent;
-  }
 
-  .dark .shiki,
-  .dark .shiki span {
-    color: var(--shiki-dark);
-    background-color: transparent;
-  }
-
-.prose pre {
+  .prose pre {
     @apply leading-relaxed bg-transparent! font-mono!;
   }
 
@@ -276,7 +210,7 @@
   }
 
   .prose tr{
-    @apply hover:bg-accent/50! transition-colors! cursor-pointer! h-10!;
+    @apply hover:bg-accent/50! transition-colors! h-10!;
   }
 
   .prose :where(th):not(:where([class~="not-prose"] *)) {

@@ -1,3 +1,11 @@
+---
+title: Lecture 8：Solving Ax = b: Row Reduced Form R
+updated: 2025-10-17
+parent: linear-algebra
+order: 8
+source: docs/Linear-Algebra-MIT/Lecture08.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-8-solving-ax-b-row-reduced-form-r/)
 
 ## 可解性
@@ -6,7 +14,9 @@
 
 我们还是通过一个例子来说明这个问题：
 
-$$\text{求方程:}\begin{bmatrix}1&2&2&2\\2&4&6&8\\3&6&8&10\end{bmatrix}\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}=\begin{bmatrix}b_1\\b_2\\b_3\end{bmatrix}\text{ 的可解条件}$$
+$$
+\text{求方程:}\begin{bmatrix}1&2&2&2\\2&4&6&8\\3&6&8&10\end{bmatrix}\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}=\begin{bmatrix}b_1\\b_2\\b_3\end{bmatrix}\text{ 的可解条件}
+$$
 
 列增广矩阵，并消元，得到矩阵 U：
 
@@ -49,7 +59,9 @@ $x_{1}\begin{bmatrix}1\\2\\3\end{bmatrix}+x_{2}\begin{bmatrix}2\\4\\6\end{bmatri
 
 我们让$x_2,x_4 = 0$，回代方程得到：
 
-$$\left\{ \begin{array}{c}x_1+2x_3=1\\2x_3=3\end{array} \right. $$
+$$
+\left\{ \begin{array}{c}x_1+2x_3=1\\2x_3=3\end{array} \right. 
+$$
 
 得到特解为：$x_p = \begin{bmatrix}-2\\0\\3/2\\0\end{bmatrix}$
 

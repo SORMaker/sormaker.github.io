@@ -1,3 +1,11 @@
+---
+title: GitHub极简工作流
+summary: SSH 登录配置，以及本地与远程仓库的日常同步流程。
+updated: 2026-02-10
+order: 1
+source: docs/GitHub极简工作流.md
+---
+
 ![Git工作流_page-0001.jpg](/blog-assets/notion-backup/GitHub%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81/Git%E5%B7%A5%E4%BD%9C%E6%B5%81_page-0001.jpg)
 
 第一步我们先从远端（Remote，也就是GitHub）拉去仓库到本地。

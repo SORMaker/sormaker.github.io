@@ -1,3 +1,11 @@
+---
+title: 一些疑难问题的解决办法
+updated: 2025-10-17
+parent: rust-async-await
+order: 6
+source: docs/Rust-Note/async-await/一些疑难问题的解决办法.md
+---
+
 `async` 在 Rust 依然比较新，疑难杂症少不了，而它们往往还处于活跃开发状态，短时间内无法被解决，因此才有了本文。下面一起来看看这些问题以及相应的临时解决方案。
 
 # 在 async 语句块中使用？

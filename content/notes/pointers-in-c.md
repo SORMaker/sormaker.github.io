@@ -1,3 +1,10 @@
+---
+title: Pointers in C/C++
+summary: C/C++ 指针视频课的学习笔记。
+updated: 2025-10-17
+order: 2
+source: docs/Poniters-in-C.md
+---
 
 💡 该笔记是关于C/C++中指针相关知识。所有课程均来自https://www.youtube.com/@mycodeschool，这是我迄今为止看到过最好的指针相关课程，强力推荐！
 ***Indians came from another planet. Thank you very much for the awesome explanation.***

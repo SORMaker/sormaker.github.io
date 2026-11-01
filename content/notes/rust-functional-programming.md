@@ -1,3 +1,11 @@
+---
+title: Functional Programming
+updated: 2025-10-17
+parent: rust
+order: 2
+source: docs/Rust-Note/Functional-Programming.md
+---
+
 # Closure
 
 闭包是**一种匿名函数，它可以赋值给变量也可以作为参数传递给其它函数，不同于函数的是，它允许捕获调用者作用域中的值。**

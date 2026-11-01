@@ -1,3 +1,11 @@
+---
+title: 卸载Ubuntu
+updated: 2025-10-17
+parent: ubuntu
+order: 2
+source: docs/Ubuntu安装指南/卸载Ubuntu.md
+---
+
 ## 1. 预下载
 
 - 傲梅分区助手：用于删除分区。

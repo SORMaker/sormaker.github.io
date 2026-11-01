@@ -1,38 +1,57 @@
-import BlogIndex from "@/components/blog/blog-index";
-import { getRootPosts } from "@/lib/blog";
-import { paginate } from "@/lib/pagination";
+import BlurFade from "@/components/magicui/blur-fade";
+import { formatDate, getTopLevelNotes, hasChildren } from "@/lib/notes";
 import type { Metadata } from "next";
-
-const PAGE_SIZE = 5;
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Notes, guides, and study materials by Zhengyang Xie.",
+  description: "Study notes on Rust, linear algebra, C pointers and Linux setup.",
   alternates: { canonical: "/blog/" },
-  openGraph: {
-    title: "Blog | Zhengyang Xie",
-    description: "Notes, guides, and study materials by Zhengyang Xie.",
-    url: "/blog/",
-    type: "website",
-    images: [{ url: "/og/blog.png", width: 1200, height: 630, alt: "Blog" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Blog | Zhengyang Xie",
-    description: "Notes, guides, and study materials by Zhengyang Xie.",
-    images: ["/og/blog.png"],
-  },
 };
 
 export default function BlogPage() {
-  const posts = getRootPosts();
-  const { items, pagination } = paginate(posts, { page: 1, pageSize: PAGE_SIZE });
+  const notes = getTopLevelNotes();
 
   return (
-    <BlogIndex
-      posts={items}
-      page={pagination.page}
-      totalPages={pagination.totalPages}
-    />
+    <main className="flex flex-col gap-10">
+      <header className="space-y-3">
+        <BlurFade delay={0.02}>
+          <Link href="/" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            ← Home
+          </Link>
+        </BlurFade>
+        <BlurFade delay={0.04}>
+          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Blog</h1>
+        </BlurFade>
+        <BlurFade delay={0.06}>
+          <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
+            Study notes, mostly in Chinese.
+          </p>
+        </BlurFade>
+      </header>
+
+      <ul className="divide-y border-y">
+        {notes.map((note, index) => (
+          <li key={note.slug} lang="zh-CN" className="py-5 sm:py-6">
+            <BlurFade delay={0.08 + index * 0.04}>
+              <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                <time dateTime={note.updated}>{formatDate(note.updated)}</time>
+                {hasChildren(note) && (
+                  <span className="rounded-full border px-2 py-0.5">Series</span>
+                )}
+              </div>
+              <h2 className="mt-2 text-lg font-semibold tracking-tight sm:text-xl">
+                <Link href={`/blog/${note.slug}/`} className="underline-offset-4 hover:underline">
+                  {note.title}
+                </Link>
+              </h2>
+              {note.summary && (
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{note.summary}</p>
+              )}
+            </BlurFade>
+          </li>
+        ))}
+      </ul>
+    </main>
   );
 }

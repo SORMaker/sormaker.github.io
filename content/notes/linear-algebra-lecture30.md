@@ -1,3 +1,11 @@
+---
+title: Lecture 30: Linear transformations and their matrices
+updated: 2025-10-17
+parent: linear-algebra
+order: 29
+source: docs/Linear-Algebra-MIT/Lecture30.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-30-linear-transformations-and-their-matrices/)
 
 如何判断一个操作是不是线性变换？线性变换需满足以下两个要求：

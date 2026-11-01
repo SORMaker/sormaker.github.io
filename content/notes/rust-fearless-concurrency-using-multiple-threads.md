@@ -1,3 +1,11 @@
+---
+title: 使用多线程
+updated: 2025-10-17
+parent: rust-fearless-concurrency
+order: 2
+source: docs/Rust-Note/Fearless-Concurrency/使用多线程.md
+---
+
 ## 多线程编程的风险
 
 由于多线程的代码是同时运行的，因此我们无法保证线程间的执行顺序，这会导致一些问题：

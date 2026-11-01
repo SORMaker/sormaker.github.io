@@ -1,3 +1,11 @@
+---
+title: Lecture 4：Factorization into A = LU
+updated: 2025-10-17
+parent: linear-algebra
+order: 4
+source: docs/Linear-Algebra-MIT/Lecture04.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-4-factorization-into-a-lu/)
 
 进行LU分解之前先，回顾一下消元法。

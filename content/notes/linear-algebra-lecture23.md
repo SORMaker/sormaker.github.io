@@ -1,3 +1,11 @@
+---
+title: Lecture 23: Differential equations and exp(At)
+updated: 2025-10-18
+parent: linear-algebra
+order: 22
+source: docs/Linear-Algebra-MIT/Lecture23.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-23-differential-equations-and-exp-at/)
 
 # 微分方程
@@ -69,7 +77,9 @@ e^{At}=SS^{-1}+S\Lambda S^{-1}t+\frac{S\Lambda^2S^{-1}t^2}{2}+\\
 $$
 
 提出 $S$ 和 $S−1$ 得到：
-$$S(I+\Lambda t+\frac{\Lambda^2t^2}{2}+\frac{\Lambda^3t^3}{3}+\cdots+\frac{\Lambda^nt^n}{n}+\cdots)S^{-1}e^{At}$$
+$$
+S(I+\Lambda t+\frac{\Lambda^2t^2}{2}+\frac{\Lambda^3t^3}{3}+\cdots+\frac{\Lambda^nt^n}{n}+\cdots)S^{-1}e^{At}
+$$
 
 故$e^{At}=Se^{\Lambda t}S^{-1}$。
 

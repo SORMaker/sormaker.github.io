@@ -1,3 +1,11 @@
+---
+title: 五种兵器
+updated: 2025-10-17
+parent: rust-unsafe-rust
+order: 1
+source: docs/Rust-Note/unsafe-Rust/五种兵器.md
+---
+
 # 解引用裸指针
 
 裸指针(raw pointer，又称原生指针) 在功能上跟引用类似，同时它也需要显式地注明可变性。但是又和引用有所不同，裸指针长这样: `*const T` 和 `*mut T`，它们分别代表了不可变和可变。

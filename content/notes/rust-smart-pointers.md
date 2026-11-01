@@ -1,3 +1,11 @@
+---
+title: Smart Pointers
+updated: 2025-10-17
+parent: rust
+order: 3
+source: docs/Rust-Note/Smart-Pointers.md
+---
+
 # Box<T>
 
 `Box<T>` 允许你将一个值分配到堆上，然后在栈上保留一个智能指针指向堆上的数据，这是rust中**最常见**的智能指针。

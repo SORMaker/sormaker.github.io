@@ -1,3 +1,11 @@
+---
+title: Error Handling
+updated: 2025-10-17
+parent: rust
+order: 7
+source: docs/Rust-Note/Error-Handling.md
+---
+
 # 组合器
 
 在设计模式中，有一个组合器模式，相信有 Java 背景的同学对此并不陌生。

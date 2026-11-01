@@ -1,3 +1,11 @@
+---
+title: Lecture 18: Properties of determinants
+updated: 2025-10-17
+parent: linear-algebra
+order: 17
+source: docs/Linear-Algebra-MIT/Lecture18.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-18-properties-of-determinants/)
 
 # 行列式及其性质

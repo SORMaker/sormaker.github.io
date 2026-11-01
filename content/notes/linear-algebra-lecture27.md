@@ -1,3 +1,11 @@
+---
+title: Lecture 27: Positive definite matrices and minima
+updated: 2025-10-17
+parent: linear-algebra
+order: 26
+source: docs/Linear-Algebra-MIT/Lecture27.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-27-positive-definite-matrices-and-minima/)
 
 # 正定矩阵和最小值

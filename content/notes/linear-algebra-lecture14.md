@@ -1,3 +1,11 @@
+---
+title: Lecture 14: Orthogonal vectors and subspaces
+updated: 2025-10-17
+parent: linear-algebra
+order: 13
+source: docs/Linear-Algebra-MIT/Lecture14.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-14-orthogonal-vectors-and-subspaces/)
 
 一图胜千言：

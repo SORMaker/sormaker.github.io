@@ -1,3 +1,11 @@
+---
+title: Global Variables
+updated: 2025-10-17
+parent: rust
+order: 6
+source: docs/Rust-Note/Global-Variables.md
+---
+
 在一些场景，我们可能需要全局变量来简化状态共享的代码，包括全局 ID，全局数据存储等等，下面一起来看看有哪些创建全局变量的方法。
 
 首先，有一点可以肯定，全局变量的生命周期肯定是`'static`，但是不代表它需要用`static`来声明，例如常量、字符串字面值等无需使用`static`进行声明，原因是它们已经被打包到二进制可执行文件中。

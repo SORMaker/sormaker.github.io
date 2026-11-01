@@ -1,64 +1,55 @@
-# Zhengyang Xie · Robotics & Control
+# Zhengyang Xie · Personal Site
 
-Personal portfolio: https://sormaker.github.io
+https://sormaker.github.io
 
-Adapted from [Magic UI Portfolio](https://github.com/magicuidesign/portfolio), with the original MIT license and Dillion Verma copyright retained in LICENSE.
+Built on the [Magic UI Portfolio](https://github.com/magicuidesign/portfolio) template (MIT, see `LICENSE`). Next.js 16, Tailwind CSS 4, static export to GitHub Pages.
 
 ## Develop
 
-Use Node.js 24 and pnpm 11.25.0.
+Node.js 24 and pnpm.
 
 ```sh
-pnpm install --frozen-lockfile
-pnpm dev --hostname 127.0.0.1 --port 4318
-```
-
-## Build and deploy
-
-```sh
+pnpm install
+pnpm dev
 pnpm lint
-pnpm build
+pnpm build   # writes the static site to out/
 ```
 
-Next.js exports the site to `out/`. Pushing to `main` runs `.github/workflows/pages.yml`, which builds and deploys this directory to GitHub Pages. The repository's Pages publishing source must be GitHub Actions.
+Pushing to `main` runs `.github/workflows/pages.yml`, which builds `out/` and deploys it to GitHub Pages.
 
-## Update content
+## Where things are
 
-The layout, animations and components follow the original Magic UI Portfolio template. Only the content was changed.
+| What | Where |
+| --- | --- |
+| Profile, experience, education, projects, honors, publications | `src/data/resume.tsx` |
+| Section intros (projects, honors, contact) | `src/components/section/` |
+| Blog notes | `content/notes/*.md` |
+| Images used by notes | `public/blog-assets/` |
+| Project media, logos, avatar | `public/` |
+| Share image (`/og.png`), sitemap, robots | `src/app/og.png/route.tsx`, `src/app/sitemap.ts`, `src/app/robots.ts` |
 
-- `src/data/resume.tsx`: profile, about, skills, research & experience, education, projects, honors and contact.
-- `src/components/section/*.tsx`: section headings and intro text (projects, honors, contact).
-- `public/`: avatar, project images/video and university logos.
+## Blog notes
 
-## Blog
+Notes are copied from [Notion-Backup](https://github.com/SORMaker/Notion-Backup). Each file starts with front matter:
 
-Articles and series are imported from [Notion-Backup](https://github.com/SORMaker/Notion-Backup). The checked-in Markdown and assets make the site independent of Notion at runtime.
-
-```sh
-node scripts/import-notes.mjs /Users/sorx/Notion-Backup
-node scripts/generate-share-images.mjs '/System/Library/Fonts/Supplemental/Arial Unicode.ttf'
-pnpm lint
-pnpm build
+```md
+---
+title: Smart Pointers
+updated: 2025-10-17
+parent: rust
+order: 3
+source: docs/Rust-Note/Smart-Pointers.md
+---
 ```
 
-`src/data/blog-manifest.json` records source paths, the source commit, and update dates from Git. `content/notes/` contains the imported text; `public/blog-assets/` and `public/og/` contain local media and share images. The image command accepts a CJK-capable TTF font path; PNGs are committed and need no system font on GitHub Actions. The importer omits the old homepage, repository checklist, and the two unfinished linear algebra entries (Lectures 31 and 32).
+- `parent` puts the note under another note. Notes without a parent appear on `/blog/`; give them a `summary`.
+- `order` sorts notes under the same parent.
+- `source` is the file's path in Notion-Backup, used for the "Source on GitHub" link.
 
-Blog lists use static pagination paths so direct links also work on GitHub Pages.
+The file name is the URL: `content/notes/rust-smart-pointers.md` → `/blog/rust-smart-pointers/`.
 
-## Content and assets
+## Credits
 
-ACT material comes from [troncamp-mani](https://github.com/SORMaker/troncamp-mani). T4 64.3/100 is a reported competition score, not a success rate. This is an ACT reproduction, not a new policy architecture.
-
-The Laser Target Tracking System card uses a photo of the competition hardware from the 2023 TI Cup contest (Shanghai division), supplied by the owner.
-
-The VLN card uses the [published navigation replay](https://github.com/SORMaker/VLN/blob/dcda0da3a1cdd4b1b069386866578308d796233c/assets/homepage/README.md) from a Seq2Seq baseline run. Its caption distinguishes this selected successful validation episode from the LLM-agent experiment described in the project text. The GIF is copied unchanged and displayed without cropping.
-
-The [bicycle repository](https://github.com/SORMaker/CH32-Bike-Overland) credits SORMaker and Jasom_Wu for software design and ErBW_s for hardware. Its competition photo and the ACT rollout video are stored locally; the video autoplays muted in its project card, as in the template.
-
-Research is labeled as a research project. No publication status or public manuscript download is implied.
-
-University emblems are from the official [SUSTech visual identity page](https://www.sustech.edu.cn/en/school_logo.html) and [Donghua University identity page](https://www.dhu.edu.cn/xxbs/list.htm). Their original colors and proportions are preserved.
-
-The TRON Camp logo uses the standalone LimX Dynamics mark from the company's [official icon assets](https://www.limxdynamics.com/iconfont/iconfont.js?v=c30ed1043a), with a white background for contrast in both themes.
-
-C++, PyTorch, ROS, MATLAB, and Git skill logos come from [Devicon](https://github.com/devicons/devicon); its MIT notice is included alongside the SVG components. The other skill symbols use Lucide.
+- University emblems: [SUSTech](https://www.sustech.edu.cn/en/school_logo.html), [Donghua University](https://www.dhu.edu.cn/xxbs/list.htm).
+- TRON Camp logo: LimX Dynamics.
+- Skill icons: [Devicon](https://github.com/devicons/devicon) (MIT, `src/components/ui/svgs/devicon-LICENSE.txt`) and [Lucide](https://lucide.dev).

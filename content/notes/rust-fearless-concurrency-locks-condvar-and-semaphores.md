@@ -1,3 +1,11 @@
+---
+title: 线程同步：锁、Condvar、信号量
+updated: 2026-02-10
+parent: rust-fearless-concurrency
+order: 4
+source: docs/Rust-Note/Fearless-Concurrency/线程同步-锁、Condvar、信号量.md
+---
+
 在 Rust 中有多种方式可以实现同步性。在上一节中讲到的消息传递就是同步性的一种实现方式，例如我们可以通过消息传递来控制不同线程间的执行次序。还可以使用共享内存来实现同步性，例如通过锁和原子操作等并发原语来实现多个线程同时且安全地去访问一个资源。
 
 # 如何选择？

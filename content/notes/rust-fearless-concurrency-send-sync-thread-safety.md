@@ -1,3 +1,11 @@
+---
+title: 基于Send和Sync的线程安全
+updated: 2025-10-17
+parent: rust-fearless-concurrency
+order: 6
+source: docs/Rust-Note/Fearless-Concurrency/基于Send和Sync的线程安全.md
+---
+
 # Rc和Arc源码对比
 
 在介绍`Send`特征之前，再来看看`Arc`为何可以在多线程使用，玄机在于两者的源码实现上：

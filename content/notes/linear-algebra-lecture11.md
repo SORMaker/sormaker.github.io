@@ -1,22 +1,46 @@
+---
+title: Lecture 11: Matrix spaces; rank 1; small world graphs
+updated: 2025-10-17
+parent: linear-algebra
+order: 11
+source: docs/Linear-Algebra-MIT/Lecture11.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-11-matrix-spaces-rank-1-small-world-graphs/)
 
 ## 矩阵空间
 
 话接上一讲，所有$3\times 3$的矩阵可以构成的封闭的空间（数乘和加法运算），记为 $M$，则其一组基为：
-$$\begin{bmatrix}1&0&0\\0&0&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&1&0\\0&0&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&1\\0&0&0\\0&0&0\end{bmatrix}$$
-$$\begin{bmatrix}0&0&0\\1&0&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&1&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&1\\0&0&0\end{bmatrix}$$
-$$\begin{bmatrix}0&0&0\\0&0&0\\1&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&0\\0&1&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&0\\0&0&1\end{bmatrix}$$
+$$
+\begin{bmatrix}1&0&0\\0&0&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&1&0\\0&0&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&1\\0&0&0\\0&0&0\end{bmatrix}
+$$
+$$
+\begin{bmatrix}0&0&0\\1&0&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&1&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&1\\0&0&0\end{bmatrix}
+$$
+$$
+\begin{bmatrix}0&0&0\\0&0&0\\1&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&0\\0&1&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&0\\0&0&1\end{bmatrix}
+$$
 
 对称矩阵构成的空间 $S$ 和上三角矩阵构成的空间 $U$ 是 $M$ 的子空间： 对称阵 $S$ 的基容易找到：
-$$\begin{bmatrix}1&0&0\\0&0&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&1&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&0\\0&0&1\end{bmatrix}$$
-$$\begin{bmatrix}0&1&0\\1&0&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&1\\0&0&0\\1&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&1\\0&1&0\end{bmatrix}$$
+$$
+\begin{bmatrix}1&0&0\\0&0&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&1&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&0\\0&0&1\end{bmatrix}
+$$
+$$
+\begin{bmatrix}0&1&0\\1&0&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&1\\0&0&0\\1&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&1\\0&1&0\end{bmatrix}
+$$
 
 上三角阵 $U$ 的基：
-$$\begin{bmatrix}1&0&0\\0&0&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&1&0\\0&0&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&1\\0&0&0\\0&0&0\end{bmatrix}$$
-$$\begin{bmatrix}0&0&0\\0&1&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&1\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&0\\0&0&1\end{bmatrix}$$
+$$
+\begin{bmatrix}1&0&0\\0&0&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&1&0\\0&0&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&1\\0&0&0\\0&0&0\end{bmatrix}
+$$
+$$
+\begin{bmatrix}0&0&0\\0&1&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&1\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&0\\0&0&1\end{bmatrix}
+$$
 
 对角矩阵是对称阵和上三角矩阵的交，可以得到另一个子空间：$D$，$D$的基容易找到：
-$$\begin{bmatrix}1&0&0\\0&0&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&1&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&0\\0&0&1\end{bmatrix}$$
+$$
+\begin{bmatrix}1&0&0\\0&0&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&1&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&0\\0&0&1\end{bmatrix}
+$$
 
 因此，有：$dimM=9，dimS=6，dimU=6，dimD=3$。
 

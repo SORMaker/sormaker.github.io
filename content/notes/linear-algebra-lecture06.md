@@ -1,3 +1,11 @@
+---
+title: Lecture 6： Column Space and Null space
+updated: 2025-10-17
+parent: linear-algebra
+order: 6
+source: docs/Linear-Algebra-MIT/Lecture06.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-6-column-space-and-nullspace/)
 
 ## 1、子空间的“交”与“并”

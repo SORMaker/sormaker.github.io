@@ -1,3 +1,11 @@
+---
+title: Lecture 9: Independence, basis, and dimension
+updated: 2025-10-17
+parent: linear-algebra
+order: 9
+source: docs/Linear-Algebra-MIT/Lecture09.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-9-independence-basis-and-dimension/)
 
 ## 线性相关、线性无关

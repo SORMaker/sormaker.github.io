@@ -1,3 +1,11 @@
+---
+title: Lecture 26: Complex matrices; fast fourier transform
+updated: 2025-10-17
+parent: linear-algebra
+order: 25
+source: docs/Linear-Algebra-MIT/Lecture26.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-26-complex-matrices-fast-fourier-transform/)
 
 # 复数矩阵与FFT

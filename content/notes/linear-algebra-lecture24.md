@@ -1,3 +1,11 @@
+---
+title: Lecture 24: Markov matrices; fourier series
+updated: 2025-10-17
+parent: linear-algebra
+order: 23
+source: docs/Linear-Algebra-MIT/Lecture24.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-24-markov-matrices-fourier-series/)
 
 ## 马尔科夫矩阵

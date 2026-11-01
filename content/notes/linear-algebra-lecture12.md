@@ -1,3 +1,11 @@
+---
+title: Lecture 12: Graphs, networks, incidence matrices
+updated: 2025-10-17
+parent: linear-algebra
+order: 12
+source: docs/Linear-Algebra-MIT/Lecture12.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-12-graphs-networks-incidence-matrices/)
 
 ## 有向图
@@ -7,20 +15,28 @@
 ![Image1](/blog-assets/notion-backup/Linear-Algebra-MIT/Lecture12/Image1.png)
 
 可以用如下方式来抽象描述：
-$$\begin{array}{c|cccc}&node_1&node_2&node_3&node_4\\\hline edge_1&-1&1&0&0\\edge_2&0&-1&1&0\\edge_3&-1&0&1&0\\edge_4&-1&0&0&1\\edge_5&&0&-1&1\end{array}$$
+$$
+\begin{array}{c|cccc}&node_1&node_2&node_3&node_4\\\hline edge_1&-1&1&0&0\\edge_2&0&-1&1&0\\edge_3&-1&0&1&0\\edge_4&-1&0&0&1\\edge_5&&0&-1&1\end{array}
+$$
 
 写成5×4矩阵来表示如下：
-$$A=\begin{bmatrix}-1&1&0&0\\0&-1&1&0\\-1&0&1&0\\-1&0&0&1\\0&0&-1&1\end{bmatrix}$$
+$$
+A=\begin{bmatrix}-1&1&0&0\\0&-1&1&0\\-1&0&1&0\\-1&0&0&1\\0&0&-1&1\end{bmatrix}
+$$
 
 这种矩阵叫做关联矩阵，其中每一列代表一个节点，每一行代表一条边（正负代表方向）。关联矩阵一般是稀疏阵，因为每一行只有两个非零元素。通过观察前三行，可以看出这三个行向量线性相关，而实际上，它的**物理意义**就是这三个向量（三条边）可以形成回路。
 
 ### $A$ 的零空间
 
 矩阵 $A$ 的零空间可以通过解 $Ax=0$ 来得到，有：
-$$Ax=\begin{bmatrix}-1&1&0&0\\0&-1&1&0\\-1&0&1&0\\-1&0&0&1\\0&0&-1&1\end{bmatrix}\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}=0$$
+$$
+Ax=\begin{bmatrix}-1&1&0&0\\0&-1&1&0\\-1&0&1&0\\-1&0&0&1\\0&0&-1&1\end{bmatrix}\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}=0
+$$
 
 展开得：
-$$\begin{bmatrix}x_2-x_1\\x_3-x_2\\x_3-x_1\\x_4-x_1\\x_4-x_3\end{bmatrix}=\begin{bmatrix}0\\0\\0\\0\\0\end{bmatrix}$$
+$$
+\begin{bmatrix}x_2-x_1\\x_3-x_2\\x_3-x_1\\x_4-x_1\\x_4-x_3\end{bmatrix}=\begin{bmatrix}0\\0\\0\\0\\0\end{bmatrix}
+$$
 
 引入矩阵的实际意义：将 $x=\begin{bmatrix}x_1&x_2&x_3&x_4\end{bmatrix}$ 视为各节点电势，则式子中的诸如 $x_2-x_1$ 的元素，可以看做该边上的电势差。容易看出其中一个解 $x=\begin{bmatrix}1\\1\\1\\1\end{bmatrix}$，即等电势情况，此时电势差为0。\
 化简 $A$ 易得 $rank(A)=3$，所以其零空间维数应为$n-r=4-3=1$，即 $\begin{bmatrix}1\\1\\1\\1\end{bmatrix}$ 就是其零空间的一组基。

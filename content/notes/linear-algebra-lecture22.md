@@ -1,3 +1,11 @@
+---
+title: Lecture 22: Diagonalization and powers of A
+updated: 2025-10-17
+parent: linear-algebra
+order: 21
+source: docs/Linear-Algebra-MIT/Lecture22.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-22-diagonalization-and-powers-of-a/)
 
 我们此前学过很多种矩阵 $A$  的分解，比如 $LU$  分解，$QR$ 分解，它们都在特定的场景发挥作用。在我们学习了特征值与特征向量以后，还可以对矩阵 $A$ 进行对角化分解。

@@ -1,3 +1,11 @@
+---
+title: Lecture 1：The geometry of linear equations
+updated: 2025-10-17
+parent: linear-algebra
+order: 1
+source: docs/Linear-Algebra-MIT/Lecture01.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-1-the-geometry-of-linear-equations/)
 
 ## 1、Overview

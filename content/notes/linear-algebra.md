@@ -1,8 +1,16 @@
+---
+title: Linear Algebra——MIT
+summary: MIT 18.06 线性代数公开课笔记，共 29 讲。
+updated: 2025-10-17
+order: 4
+source: docs/Linear-Algebra-MIT.md
+---
+
 课程视频来自于MIT的Linear Algebra公开课：[麻省理工学院—线性代数课（完整版72讲）通俗易懂，绝对是线性代数课程天花板！_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1rH4y1N7BW/?spm_id_from=333.788.videopod.episodes&vd_source=6988d2e0512788e824dd750150bd2b5d)
 
 ---
 
-[Lecture 1：The geometry of linear quations](/blog/linear-algebra-lecture01/)
+[Lecture 1：The geometry of linear equations](/blog/linear-algebra-lecture01/)
 
 [Lecture 2：Elimination with matrices](/blog/linear-algebra-lecture02/)
 
@@ -16,7 +24,7 @@
 
 [Lecture 7： Solving Ax = 0 Pivot Variables, Special Solutions](/blog/linear-algebra-lecture07/)
 
-[Lecture 8：Solving Ax b Row Reduced Form R](/blog/linear-algebra-lecture08/)
+[Lecture 8：Solving Ax = b: Row Reduced Form R](/blog/linear-algebra-lecture08/)
 
 [Lecture 9: Independence, basis, and dimension](/blog/linear-algebra-lecture09/)
 

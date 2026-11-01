@@ -1,3 +1,11 @@
+---
+title: Reference Cycles and Self Reference
+updated: 2025-10-17
+parent: rust
+order: 4
+source: docs/Rust-Note/Reference-Cycles-and-Self-Reference.md
+---
+
 # Weak与循环引用
 
 ## 什么是循环引用

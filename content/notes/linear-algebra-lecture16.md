@@ -1,3 +1,11 @@
+---
+title: Lecture 16: Projection matrices and least squares
+updated: 2025-10-17
+parent: linear-algebra
+order: 15
+source: docs/Linear-Algebra-MIT/Lecture16.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-16-projection-matrices-and-least-squares/)
 
 ## 投影矩阵

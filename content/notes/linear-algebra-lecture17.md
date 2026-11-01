@@ -1,3 +1,11 @@
+---
+title: Lecture 17: Orthogonal matrices and Gram-Schmidt
+updated: 2025-10-17
+parent: linear-algebra
+order: 16
+source: docs/Linear-Algebra-MIT/Lecture17.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-17-orthogonal-matrices-and-gram-schmidt/)
 
 ## 标准正交基

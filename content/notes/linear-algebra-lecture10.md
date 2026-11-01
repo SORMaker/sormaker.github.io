@@ -1,3 +1,11 @@
+---
+title: Lecture 10: The four fundamental subspaces
+updated: 2025-10-17
+parent: linear-algebra
+order: 10
+source: docs/Linear-Algebra-MIT/Lecture10.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-10-the-four-fundamental-subspaces/)
 
 # 四个基本子空间
@@ -27,7 +35,9 @@
 
 假如我们换个角度思考，直接来看 A 的行向量组，消元得到：
 
-$$A=\begin{bmatrix}1&2&3&1\\1&1&2&1\\1&2&3&1\end{bmatrix}\xrightarrow{消元}\begin{bmatrix}1&0&1&1\\0&1&1&0\\0&0&0&0\end{bmatrix}=R$$
+$$
+A=\begin{bmatrix}1&2&3&1\\1&1&2&1\\1&2&3&1\end{bmatrix}\xrightarrow{消元}\begin{bmatrix}1&0&1&1\\0&1&1&0\\0&0&0&0\end{bmatrix}=R
+$$
 
 消元的本质是做行变换，此时A的列空间发生变化（$C(R)≠C(A)$），但却并不影响行空间。可以在R中看出前两行就是行空间的一组基。所以，可以得出无论对于矩阵A还是R，其行空间的一组基，可以由R矩阵的前r行向量组成。
 
@@ -42,10 +52,14 @@ $$A=\begin{bmatrix}1&2&3&1\\1&1&2&1\\1&2&3&1\end{bmatrix}\xrightarrow{消元}\be
 还记得怎么得到 $E$ 吗？采用 Gauss-Jordan消元，将增广矩阵 $[A_{m×n}|I_{m×m}]$ 中 $A$ 的部分划为简化行阶梯形式 $[R_{m×n}|E_{m×m}]$，$E$ 将 $A$ 变为 $R$ 的同时，也把 $I$  变成了 $E$，化简完毕我们就得到了矩阵 $E$，而它则会把所有的行变换操作记录下来。
 
 本例中：
-$$[A_{m×n}|I_{m×m}]=\begin{bmatrix}1&2&3&1&1&0&0\\1&1&2&1&0&1&0\\1&2&3&1&0&0&1\end{bmatrix}\xrightarrow{消元}\begin{bmatrix}1&0&1&1&-1&2&0\\0&1&1&0&0&1&-1\\0&0&0&0&-1&0&1\end{bmatrix}=[R_{m×n}|E_{m×m}]$$
+$$
+[A_{m×n}|I_{m×m}]=\begin{bmatrix}1&2&3&1&1&0&0\\1&1&2&1&0&1&0\\1&2&3&1&0&0&1\end{bmatrix}\xrightarrow{消元}\begin{bmatrix}1&0&1&1&-1&2&0\\0&1&1&0&0&1&-1\\0&0&0&0&-1&0&1\end{bmatrix}=[R_{m×n}|E_{m×m}]
+$$
 
 则
-$$EA=\begin{bmatrix}-1&2&0\\0&1&-1\\-1&0&1\end{bmatrix}⋅\begin{bmatrix}1&2&3&1\\1&1&2&1\\1&2&3&1\end{bmatrix}=\begin{bmatrix}1&0&1&1\\0&1&1&0\\0&0&0&0\end{bmatrix}=R$$
+$$
+EA=\begin{bmatrix}-1&2&0\\0&1&-1\\-1&0&1\end{bmatrix}⋅\begin{bmatrix}1&2&3&1\\1&1&2&1\\1&2&3&1\end{bmatrix}=\begin{bmatrix}1&0&1&1\\0&1&1&0\\0&0&0&0\end{bmatrix}=R
+$$
 
 很明显，式中E的最后一行对A的行做线性组合后（行视角：-1个行1+0个行2+1个行3），得到 $R$ 的最后一行，即 0向量，也就是 $y^TA=0$。另一方面，$E$ 的第三行对应的行向量就是矩阵 $A$ 的左零空间的基，维数是1。
 
@@ -56,5 +70,7 @@ $$EA=\begin{bmatrix}-1&2&0\\0&1&-1\\-1&0&1\end{bmatrix}⋅\begin{bmatrix}1&2&3&1
 举个例子，矩阵可以同向量一样，做求和、数乘。那么什么样的矩阵构成的空间满足封闭性呢？ 比如，设所有 $3 \times 3$ 矩阵组成的矩阵空间为 $M$。则上三角矩阵、对称矩阵、对角矩阵（前两者的交集）都可以构成矩阵空间。
 
 观察一下对角矩阵，如果取：
-$$\begin{bmatrix}1&0&0\\0&0&0\\0&0&0\end{bmatrix}\begin{bmatrix}1&0&0\\0&3&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&0\\0&0&7\end{bmatrix}$$
+$$
+\begin{bmatrix}1&0&0\\0&0&0\\0&0&0\end{bmatrix}\begin{bmatrix}1&0&0\\0&3&0\\0&0&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&0\\0&0&7\end{bmatrix}
+$$
 可以发现，任何三阶对角矩阵均可用这三个矩阵的线性组合生成，因此，他们生成了三阶对角矩阵空间，即这三个矩阵是三阶对角矩阵空间的一组基。

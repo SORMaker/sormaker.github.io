@@ -1,61 +1,24 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard } from "@/components/project-card";
+import { SectionHeader } from "@/components/section/section-header";
 import { DATA } from "@/data/resume";
 
-const BLUR_FADE_DELAY = 0.04;
-
-export default function ProjectsSection() {
-    return (
-        <section id="projects">
-            <div className="flex min-h-0 flex-col gap-y-8">
-                <div className="flex flex-col gap-y-4 items-center justify-center">
-                    <div className="flex items-center w-full">
-                        <div
-                            className="flex-1 h-px bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent"
-
-                        />
-                        <div className="border bg-primary z-10 rounded-xl px-4 py-1">
-                            <span className="text-background text-sm font-medium">My Projects</span>
-                        </div>
-                        <div
-                            className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent"
-
-                        />
-                    </div>
-                    <div className="flex flex-col gap-y-3 items-center justify-center">
-                        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Things I&apos;ve built</h2>
-                        <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">
-                            From VLA policies on a dual-arm robot to controllers running on a
-                            microcontroller: projects where I took learning and control from
-                            idea to a working system.
-                        </p>
-                    </div>
-                </div>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto auto-rows-fr">
-                    {DATA.projects.map((project, id) => (
-                        <BlurFade
-                            key={project.title}
-                            delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-                            className="h-full"
-                        >
-                            <ProjectCard
-                                href={project.href}
-                                key={project.title}
-                                title={project.title}
-                                description={project.description}
-                                dates={project.dates}
-                                tags={project.technologies}
-                                image={project.image}
-                                imageFit={"imageFit" in project ? project.imageFit : undefined}
-                                imageAlt={"imageAlt" in project ? project.imageAlt : undefined}
-                                mediaCaption={"mediaCaption" in project ? project.mediaCaption : undefined}
-                                video={project.video}
-                                links={project.links}
-                            />
-                        </BlurFade>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
+export default function ProjectsSection({ delay }: { delay: number }) {
+  return (
+    <div className="flex min-h-0 flex-col gap-y-8">
+      <BlurFade delay={delay}>
+        <SectionHeader label="My Projects" title="Things I've built">
+          From VLA policies on a dual-arm robot to controllers running on a microcontroller: projects where I took
+          learning and control from idea to a working system.
+        </SectionHeader>
+      </BlurFade>
+      <div className="mx-auto grid max-w-[800px] grid-cols-1 gap-3 sm:auto-rows-fr sm:grid-cols-2">
+        {DATA.projects.map((project, index) => (
+          <BlurFade key={project.title} delay={delay + 0.04 + index * 0.05} className="h-full">
+            <ProjectCard project={project} />
+          </BlurFade>
+        ))}
+      </div>
+    </div>
+  );
 }

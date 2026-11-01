@@ -1,3 +1,11 @@
+---
+title: Lecture 15: Projections onto Subspaces
+updated: 2025-10-17
+parent: linear-algebra
+order: 14
+source: docs/Linear-Algebra-MIT/Lecture15.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-15-projections-onto-subspaces/)
 
 ## 二维空间投影
@@ -42,7 +50,9 @@ $$
 此平面即为矩阵 $A$ 的列空间，由于 $b$ 不在平面上，因此$Ax = b$无解，$A\hat{x} = p$中的$\hat{x}$就是最优解。
 
 同样地，有 $e = b - p = b - A\hat{x}$ 与平面垂直($A$的列空间)，因此 
-$$A^Te = 0：\left[ \begin{array}{}a_1^T \\ a_2^T\end{array}\right](b - A\hat{x}) = \left[\begin{array}{}0 \\ 0 \end{array}\right]$$
+$$
+A^Te = 0：\left[ \begin{array}{}a_1^T \\ a_2^T\end{array}\right](b - A\hat{x}) = \left[\begin{array}{}0 \\ 0 \end{array}\right]
+$$
 
 > 这与二维投影的$a^T(b - xa) = 0$并无差别，只不过二维空间的$A^T$只有一列罢了。
 

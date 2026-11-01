@@ -1,3 +1,11 @@
+---
+title: 安装Ubuntu
+updated: 2025-10-17
+parent: ubuntu
+order: 1
+source: docs/Ubuntu安装指南/安装Ubuntu.md
+---
+
 ## 1. 预下载
 
 - UltraISO：用于提取镜像中的安装文件

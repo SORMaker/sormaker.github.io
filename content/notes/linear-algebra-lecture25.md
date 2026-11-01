@@ -1,3 +1,11 @@
+---
+title: Lecture 25: Symmetric matrices and positive definiteness
+updated: 2025-10-17
+parent: linear-algebra
+order: 24
+source: docs/Linear-Algebra-MIT/Lecture25.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-25-symmetric-matrices-and-positive-definiteness/)
 
 # 对称矩阵与正定性

@@ -1,3 +1,11 @@
+---
+title: WSL-Windows Subsystem For Linux
+summary: WSL 的安装、卸载、导出和还原等常用命令。
+updated: 2025-10-17
+order: 3
+source: docs/WSL-Windows-Subsystem-For-Linux.md
+---
+
 # 1、安装WSL
 
 ```rust

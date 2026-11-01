@@ -1,3 +1,11 @@
+---
+title: Pin 和 Unpin
+updated: 2025-10-17
+parent: rust-async-await
+order: 3
+source: docs/Rust-Note/async-await/Pin和Unpin.md
+---
+
 在 Rust 异步编程中，有一个定海神针般的存在，它就是 `Pin`，作用说简单也简单，说复杂也非常复杂，当初刚出来时就连一些 Rust 大佬都一头雾水，何况瑟瑟发抖的我。好在今非昔比，目前网上的资料已经很全，而我就借花献佛，给大家好好讲讲这个 `Pin`。
 
 在 Rust 中，所有的类型可以分为两类：

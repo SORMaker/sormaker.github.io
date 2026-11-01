@@ -37,10 +37,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-.content-collections
-
-# Local verification evidence
-/verification/
 
 # Local editor/agent guidance
 /AGENTS.md

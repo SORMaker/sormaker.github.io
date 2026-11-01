@@ -1,3 +1,11 @@
+---
+title: Lecture 28: Similar matrices and Jordan form
+updated: 2025-10-18
+parent: linear-algebra
+order: 27
+source: docs/Linear-Algebra-MIT/Lecture28.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-28-similar-matrices-and-jordan-form/)
 
 在本讲的开始，先接着上一讲来继续说一说正定矩阵。
@@ -23,7 +31,8 @@
 
 举个例子，$A=\begin{bmatrix}2&1\\1&2\end{bmatrix}$，容易通过其特征值得到相应的对角矩阵$\Lambda=\begin{bmatrix}3&0\\0&1\end{bmatrix}$，取$M=\begin{bmatrix}1&4\\0&1\end{bmatrix}$，则
 $$
-B=M^{-1}AM=\begin{bmatrix}1&-4\\0&1\end{bmatrix}\begin{bmatrix}2&1\\1&2\end{bmatrix}\begin{bmatrix}1&4\\0&1\end{bmatrix}=\begin{bmatrix}-2&-15\\1&6\end{bmatrix}$$
+B=M^{-1}AM=\begin{bmatrix}1&-4\\0&1\end{bmatrix}\begin{bmatrix}2&1\\1&2\end{bmatrix}\begin{bmatrix}1&4\\0&1\end{bmatrix}=\begin{bmatrix}-2&-15\\1&6\end{bmatrix}
+$$
 我们来计算这几个矩阵的特征值（利用迹与行列式的性质），$\lambda_{\Lambda}=3,\mathrm{~1}、\lambda_{A}=3,\mathrm{~1}、\lambda_{B}=3,\mathrm{~1}$
     
 

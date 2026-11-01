@@ -1,3 +1,11 @@
+---
+title: async/await和Stream流处理
+updated: 2025-10-17
+parent: rust-async-await
+order: 4
+source: docs/Rust-Note/async-await/async-await和Stream流处理.md
+---
+
 在入门章节中，我们简单学习了该如何使用 `async/.await`，同时在后面也了解了一些底层原理，现在是时候继续深入了。
 
 `async/.await` 是 Rust 语法的一部分，它在遇到阻塞操作时(例如 IO )会让出当前线程的所有权而不是阻塞当前线程，这样就允许当前线程继续去执行其它代码，最终实现并发。

@@ -1,3 +1,11 @@
+---
+title: Lecture 19: Determinant formulas and cofactors
+updated: 2025-10-17
+parent: linear-algebra
+order: 18
+source: docs/Linear-Algebra-MIT/Lecture19.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-19-determinant-formulas-and-cofactors/)
 
 ## 二阶行列式公式

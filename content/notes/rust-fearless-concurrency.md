@@ -1,3 +1,11 @@
+---
+title: Fearless Concurrency
+updated: 2026-02-10
+parent: rust
+order: 5
+source: docs/Rust-Note/Fearless-Concurrency.md
+---
+
 [并发和并行](/blog/rust-fearless-concurrency-concurrency-and-parallelism/)
 
 [使用多线程](/blog/rust-fearless-concurrency-using-multiple-threads/)

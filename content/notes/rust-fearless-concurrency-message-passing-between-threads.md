@@ -1,3 +1,11 @@
+---
+title: 线程间的消息传递
+updated: 2025-10-17
+parent: rust-fearless-concurrency
+order: 3
+source: docs/Rust-Note/Fearless-Concurrency/线程间的消息传递.md
+---
+
 ## 消息通道
 
 Rust 是在标准库里提供了消息通道(`channel`)，你可以将其想象成一场直播，多个主播联合起来在搞一场直播，最终内容通过通道传输给屏幕前的我们，其中主播被称之为**发送者**，观众被称之为**接收者**，显而易见的是：一个通道应该支持多个发送者和接收者。

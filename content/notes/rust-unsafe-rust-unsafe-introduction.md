@@ -1,3 +1,11 @@
+---
+title: unsafe简介
+updated: 2025-10-17
+parent: rust-unsafe-rust
+order: 2
+source: docs/Rust-Note/unsafe-Rust/unsafe简介.md
+---
+
 # 为何会有unsafe
 
 几乎每个语言都有 `unsafe` 关键字，但 Rust 语言使用 `unsafe` 的原因可能与其它编程语言还有所不同。

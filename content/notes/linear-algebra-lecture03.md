@@ -1,3 +1,11 @@
+---
+title: Lecture 3：Multiplication and inverse matrices
+updated: 2025-10-17
+parent: linear-algebra
+order: 3
+source: docs/Linear-Algebra-MIT/Lecture03.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-3-multiplication-and-inverse-matrices/)
 
 ## 1、Multiplication (矩阵乘法)

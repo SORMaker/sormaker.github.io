@@ -1,3 +1,11 @@
+---
+title: 并发和并行
+updated: 2025-10-17
+parent: rust-fearless-concurrency
+order: 1
+source: docs/Rust-Note/Fearless-Concurrency/并发和并行.md
+---
+
 ![image.png](/blog-assets/notion-backup/Rust-Note/Fearless-Concurrency/%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C/image.png)
 
 上图很直观的体现了：

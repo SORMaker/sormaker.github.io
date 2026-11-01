@@ -1,3 +1,11 @@
+---
+title: async编程入门
+updated: 2025-10-17
+parent: rust-async-await
+order: 1
+source: docs/Rust-Note/async-await/async编程入门.md
+---
+
 # async简介
 
 `async` 是 Rust 选择的异步编程模型，下面我们来介绍下它的优缺点，以及何时适合使用。

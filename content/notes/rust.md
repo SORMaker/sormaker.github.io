@@ -1,3 +1,11 @@
+---
+title: Rust Note
+summary: Rust 进阶笔记：生命周期、智能指针、并发、unsafe 和 async/await。
+updated: 2025-10-17
+order: 5
+source: docs/Rust-Note.md
+---
+
 > 记录Rust进阶知识点
 
 [Lifetime](/blog/rust-lifetime/)

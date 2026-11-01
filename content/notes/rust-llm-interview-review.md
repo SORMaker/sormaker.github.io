@@ -1,3 +1,11 @@
+---
+title: 足下科技-RUST+LLM岗-复习
+updated: 2025-10-17
+parent: rust
+order: 10
+source: docs/Rust-Note/足下科技-RUST+LLM岗-复习.md
+---
+
 ## 对Rust所有权的理解
 
 - 单一所有权

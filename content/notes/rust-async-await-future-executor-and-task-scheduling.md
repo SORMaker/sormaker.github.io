@@ -1,3 +1,11 @@
+---
+title: Future执行器与任务调度
+updated: 2025-10-17
+parent: rust-async-await
+order: 2
+source: docs/Rust-Note/async-await/Future执行器与任务调度.md
+---
+
 # Future特征
 
 `Future` 特征是 Rust 异步编程的核心，毕竟异步函数是异步编程的核心，而 `Future` 恰恰是异步函数的返回值和被执行的关键。

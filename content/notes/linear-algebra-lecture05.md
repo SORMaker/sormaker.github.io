@@ -1,3 +1,11 @@
+---
+title: Lecture 5：Spaces R^n
+updated: 2025-10-17
+parent: linear-algebra
+order: 5
+source: docs/Linear-Algebra-MIT/Lecture05.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-5-transposes-permutations-spaces-r-n/)
 
 ## 1、Vector Spaces (向量空间)

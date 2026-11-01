@@ -1,3 +1,11 @@
+---
+title: 常见问题
+updated: 2025-10-17
+parent: ubuntu
+order: 3
+source: docs/Ubuntu安装指南/常见问题.md
+---
+
 # Windows和Ubuntu时间错位问题
 
 ## 原因

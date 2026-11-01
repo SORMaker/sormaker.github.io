@@ -1,3 +1,10 @@
+---
+title: Lifetime
+updated: 2025-10-17
+parent: rust
+order: 1
+source: docs/Rust-Note/Lifetime.md
+---
 
 💡
 

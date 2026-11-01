@@ -1,3 +1,11 @@
+---
+title: Lecture 20: Cramer's rule, inverse matrix, and volume
+updated: 2025-10-17
+parent: linear-algebra
+order: 19
+source: docs/Linear-Algebra-MIT/Lecture20.md
+---
+
 [课程原页](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-20-cramers-rule-inverse-matrix-and-volume/)
 
 ## 求逆矩阵
