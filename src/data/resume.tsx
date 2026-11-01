@@ -133,6 +133,17 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "TRON Camp 2026: Multi-Task VLA",
+      href: "https://github.com/SORMaker/troncamp-mani",
+      dates: "Jul 2026 - Aug 2026",
+      description:
+        "Team LimY at LimX Dynamics' TRON Camp, on the TRON2 dual-arm robot. **2nd in table clearing, 5th overall.** The team fine-tuned one π0.5 model with LoRA for flower insertion and table clearing, and used DAgger to collect correction demos for failed insertions. I collected VR teleoperation demos for table clearing and cloth folding and removed corrupted episodes. To qualify, I trained ACT policies for four simulated dual-arm tasks in the online stage. The video shows my three-bowl stacking policy in simulation.",
+      technologies: ["π0.5", "LoRA", "DAgger", "Teleoperation", "ACT"],
+      image: "/projects/act-t4-poster.webp",
+      imageAlt: "Simulated TRON2 dual-arm robot stacking three bowls with an ACT policy",
+      video: "/projects/act-t4.mp4",
+    },
+    {
       title: "Vision-and-Language Navigation",
       href: "https://github.com/SORMaker/VLN",
       dates: "Jan 2025 - Jun 2025",
