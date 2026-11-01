@@ -53,7 +53,7 @@ export const DATA = {
   description:
     "Master's student at SUSTech working on robot learning, from VLA policies for dual-arm manipulation to embedded control.",
   summary:
-    "I'm a master's student in Control Science and Engineering at [SUSTech](/#education). I'm interested in how robots learn manipulation skills from demonstrations, and in what it takes to make those skills hold up on real hardware.\n\nMost recently, I trained ACT policies and collected teleoperation data for a multi-task VLA policy on the TRON2 dual-arm robot at [TRON Camp 2026](/#work), where our team placed 2nd in table clearing and 5th onsite. Before that, I explored LLM-based planning for vision-and-language navigation and co-authored [MD-Grasp](/#publications), a real-time grasp detection network (PRCV 2025).\n\nMy foundation is in control. At Donghua University, where I ranked in the top 2% of my major, I built a self-balancing autonomous bicycle and a vision-guided laser tracking system — both won [national first prizes](/#honors). I'm currently looking for **internships in embodied AI and VLA**.",
+    "I'm a master's student in Control Science and Engineering at [SUSTech](/#education). I'm interested in how robots learn manipulation skills from demonstrations, and in what it takes to make those skills hold up on real hardware.\n\nMost recently, I collected teleoperation data for a multi-task VLA policy on the TRON2 dual-arm robot at [TRON Camp 2026](/#work), where our team placed 2nd in table clearing and 5th overall. Before that, I explored LLM-based planning for vision-and-language navigation and co-authored [MD-Grasp](/#publications), a real-time grasp detection network (PRCV 2025).\n\nMy foundation is in control. At Donghua University, I built a self-balancing autonomous bicycle and a vision-guided laser tracking system — both won [national first prizes](/#honors). I'm currently looking for **internships in embodied AI and VLA**.",
   // TODO(补充): 头像目前是卡通狗，求职用可换成真人照片
   avatarUrl: "/avatar.webp",
   skills: [
@@ -80,14 +80,14 @@ export const DATA = {
   work: [
     {
       company: "TRON Camp 2026 · Multi-Task VLA",
-      href: "https://github.com/SORMaker/troncamp-mani",
+      href: "https://www.limxdynamics.com/",
       location: "LimX Dynamics",
-      title: "Team LimY · 2nd in table clearing, 5th overall (71.56)",
+      title: "Team LimY · 2nd in table clearing, 5th overall",
       logoUrl: "/organizations/limx-dynamics.svg",
-      start: "Jul 2026",
+      start: "Aug 2026",
       end: "Aug 2026",
       description:
-        "Qualified through the online simulation stage (Jul 4–24), then competed onsite (Aug 3–7) with the TRON2 dual-arm robot.\n\n- **Team work.** The team fine-tuned one π0.5 model with LoRA for two tasks, flower insertion and language-conditioned object sorting, using [FluxVLA](https://github.com/emoPointer/FluxVLA-Tron2) on 8× RTX PRO 6000 GPUs. The multi-task model outperformed single-task models. The team used DAgger to collect 50 correction demos for failed insertions, on top of 300 flower-insertion demos.\n- **Data.** Collected VR teleoperation demos with the team (500 for sorting across 10 prompts, 600 for folding) and removed corrupted episodes.\n- **Online qualifier (individual).** Trained ACT policies for four simulated tasks. See [ACT for Dual-Arm Manipulation](/#projects).",
+        "Competed onsite (Aug 3–7) with the TRON2 dual-arm robot.\n\n- **Team work.** The team fine-tuned one π0.5 model with LoRA for two tasks, flower insertion and table clearing (language-conditioned sorting), using [FluxVLA](https://github.com/emoPointer/FluxVLA-Tron2) on 8× RTX PRO 6000 GPUs. The multi-task model outperformed single-task models. The team used DAgger to collect 50 correction demos for failed insertions, on top of 300 flower-insertion demos.\n- **Data.** Collected VR teleoperation demos with the team (500 for table clearing across 10 prompts, 600 for cloth folding) and removed corrupted episodes.",
     },
     {
       // TODO(补充): 起始时间（目前假定 Sep 2025）；论文投稿后补充状态与链接
@@ -110,7 +110,7 @@ export const DATA = {
       start: "Sep 2023",
       end: "Jul 2024",
       description:
-        "Led Donghua's student science-and-innovation lab.\n\n- Trained 50+ new members.\n- Organized smart-car competitions and lab open days for 100+ people.\n- Managed the lab budget, reimbursements, and purchases.",
+        "Led Donghua's student science-and-innovation lab.\n\n- Trained 50+ new members.\n- Organized smart-car competitions and lab open days for 100+ people.",
     },
   ] satisfies Experience[],
   education: [
@@ -125,7 +125,7 @@ export const DATA = {
     {
       school: "Donghua University",
       href: "https://english.dhu.edu.cn/",
-      degree: "B.Eng. in Automation · GPA 4.21/5.00, top 2%",
+      degree: "B.Eng. in Automation",
       logoUrl: "/education/donghua.png",
       start: "Sep 2021",
       end: "Jun 2025",
@@ -133,21 +133,11 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "ACT for Dual-Arm Manipulation",
-      href: "https://github.com/SORMaker/troncamp-mani",
-      dates: "Jul 2026",
-      description:
-        "Online qualifier for TRON Camp 2026, done on my own. I trained ACT (Action Chunking with Transformers) policies for four simulated TRON2 tasks, all in one codebase, on A100 GPUs. Scores: 59, 66, 74 and **64.3**. The hardest task, stacking three bowls, used 1,021 demos and 3 GPUs. I also made long training runs resumable: the loop saves checkpoints, writes the best model to disk as soon as it improves, decays the learning rate, and logs NaN/Inf losses.",
-      technologies: ["ACT", "PyTorch", "DDP", "Dual-arm", "Simulation"],
-      image: "/projects/act-t4-poster.webp",
-      video: "/projects/act-t4.mp4",
-    },
-    {
       title: "Vision-and-Language Navigation",
       href: "https://github.com/SORMaker/VLN",
       dates: "Jan 2025 - Jun 2025",
       description:
-        "Project lead. I trained a Seq2Seq agent (LSTM with attention) on R2R in the Matterport3D simulator. Student forcing raised its validation success rate by **11 points** over teacher forcing. I then reproduced [MapGPT](https://arxiv.org/abs/2401.07314) (ACL 2024), which plans with GPT-4o and a map of visited viewpoints. It reached **2.3×** the Seq2Seq success rate in unseen environments. I also built top-down trajectory views to study its failures. The work later grew into [MD-Grasp](/#publications) (PRCV 2025).",
+        "Project lead. I raised the validation success rate by **11 points** by training a Seq2Seq agent (LSTM with attention) on R2R with student forcing instead of teacher forcing. I then reproduced [MapGPT](https://arxiv.org/abs/2401.07314) (ACL 2024), a GPT-4o agent that plans on a map of visited viewpoints, and built top-down trajectory views to study its failures. The work later grew into [MD-Grasp](/#publications) (PRCV 2025).",
       technologies: ["PyTorch", "LLM Agents", "Matterport3D", "Seq2Seq"],
       image: "/projects/vln-navigation-success.gif",
       imageAlt: "Top-down replay of a Seq2Seq agent's route next to the ground-truth route",
@@ -158,7 +148,7 @@ export const DATA = {
       href: "https://github.com/SORMaker/CH32-Bike-Overland",
       dates: "Mar 2023 - Aug 2023",
       description:
-        "A self-balancing bicycle that follows outdoor routes by itself, with all control on a RISC-V CH32V307 microcontroller. We were a team of three. I wrote the state estimation: GNSS and magnetometer drivers, magnetometer calibration (ellipsoid fitting), Mahony attitude estimation, and GPS–IMU fusion. I also designed the control: a three-loop cascade on the flywheel for balance (speed, roll angle, roll rate), and a cascaded steering loop with yaw-rate feedback to reduce servo jitter. The team used B-spline route planning and Stanley path tracking. **National First Prize**, 3rd place nationally.",
+        "A self-balancing bicycle that follows outdoor routes by itself, with all control on a RISC-V CH32V307 microcontroller. We were a team of three. I implemented the state estimation: GNSS and magnetometer drivers, ellipsoid-fitting magnetometer calibration, Mahony attitude estimation, and GPS–IMU fusion. I also designed the control loops: a three-loop cascade (speed, roll angle, roll rate) that balances the bike with the flywheel, and a cascaded steering loop with yaw-rate feedback that reduces servo jitter. The team used B-spline route planning and Stanley path tracking. **National First Prize**, 3rd place nationally.",
       technologies: ["CH32V307", "Cascade PID", "Stanley", "Sensor Fusion"],
       image: "/projects/bicycle.webp",
       imageAlt: "The autonomous off-road bicycle at the competition",
@@ -168,7 +158,7 @@ export const DATA = {
       href: "https://github.com/SORMaker/2023NUEDC",
       dates: "Aug 2023 - Sep 2023",
       description:
-        "Built in four days for the 2023 National Electronics Design Contest. One pan-tilt gimbal draws a path with a red laser; the other follows it with a green laser. With my smart-car teammates, I wrote the vision code for both gimbals (OpenMV and K210). It finds the laser spot in real time and sends its position to the gimbal controllers over UART. **National First Prize** and Shanghai First Prize.",
+        "A two-gimbal laser system built in four days for the 2023 National Electronics Design Contest: one gimbal draws a path with a red laser, and the other tracks it with a green laser. With my smart-car teammates, I wrote real-time laser-spot detection for both gimbals (OpenMV and K210), and sent the spot coordinates to the CH32V307 controllers over UART as checksummed packets. **National First Prize** and Shanghai First Prize.",
       technologies: ["OpenMV", "K210", "Machine Vision", "Embedded Control"],
       image: "/projects/laser-tracking.webp",
       imageAlt: "The two pan-tilt laser gimbals with OpenMV and K210 cameras",
@@ -184,13 +174,18 @@ export const DATA = {
       title: "China National Scholarship",
       dates: "December 2024",
       organization: "Ministry of Education of the People's Republic of China",
-      description: "Top 0.8%",
     },
     {
       title: "Shanghai Government Scholarship",
       dates: "December 2023",
       organization: "Shanghai Municipal Education Commission",
-      description: "Top 2%",
+    },
+    {
+      title: "China Undergraduate Mathematical Contest in Modeling",
+      dates: "November 2023",
+      organization: "Shanghai",
+      description: "Shanghai Second Prize.",
+      competition: true,
     },
     {
       title: "National University Students Intelligent Car Race",
@@ -207,14 +202,6 @@ export const DATA = {
       description: "National First Prize and Shanghai First Prize with the laser target tracking system.",
       competition: true,
       source: "https://github.com/SORMaker/2023NUEDC",
-    },
-    {
-      // TODO(补充): 具体月份与所做题目（暂时记不清）
-      title: "China Undergraduate Mathematical Contest in Modeling",
-      dates: "2023",
-      organization: "Shanghai",
-      description: "Shanghai Second Prize.",
-      competition: true,
     },
     {
       title: "Shanghai Undergraduate Electronics Design Contest",
@@ -237,7 +224,7 @@ export const DATA = {
       title:
         "MD-Grasp: Background-Adaptive Grasp Detection for Real-time Robotic Manipulation Using Mamba and Attention Fusion Network",
       authors: "Futeng Liu, Diankai Sun, **Zhengyang Xie**, Jiacui Huang, Hongtao Zhang, Mingbo Zhao",
-      venue: "Pattern Recognition and Computer Vision (PRCV)",
+      venue: "Proceedings of the 8th Chinese Conference on Pattern Recognition and Computer Vision (PRCV), pp. 62–76",
       year: "2025",
     },
   ],
