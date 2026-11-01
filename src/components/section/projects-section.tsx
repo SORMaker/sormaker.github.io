@@ -8,8 +8,8 @@ export default function ProjectsSection({ delay }: { delay: number }) {
     <div className="flex min-h-0 flex-col gap-y-8">
       <BlurFade delay={delay}>
         <SectionHeader label="My Projects" title="Things I've built">
-          From VLA policies on a dual-arm robot to controllers running on a microcontroller: projects where I took
-          learning and control from idea to a working system.
+          I started with control on microcontrollers and moved on to robot learning. Here are the projects along the
+          way.
         </SectionHeader>
       </BlurFade>
       <div className="mx-auto grid max-w-[800px] grid-cols-1 gap-3 sm:auto-rows-fr sm:grid-cols-2">
