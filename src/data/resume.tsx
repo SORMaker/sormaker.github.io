@@ -163,7 +163,7 @@ export const DATA = {
   publications: [
     {
       title:
-        "Global Exponential Estimation of the Unknown Frequencies of Discrete-Time Multi-Tone Sinusoidal Signals with an Unknown Bias",
+        "Global Exponential Frequency Estimation for Discrete-time Multi-tone Sinusoidal Signals with an Unknown Bias",
       authors: "**Zhengyang Xie**, Tao Liu",
       venue: "Under review",
       year: "",
