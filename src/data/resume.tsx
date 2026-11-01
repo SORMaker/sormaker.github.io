@@ -165,7 +165,7 @@ export const DATA = {
       title:
         "Global Exponential Frequency Estimation for Discrete-time Multi-tone Sinusoidal Signals with an Unknown Bias",
       authors: "**Zhengyang Xie**, Tao Liu",
-      venue: "Under review",
+      venue: "Under revision",
       year: "",
     },
     {
