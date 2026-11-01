@@ -4,7 +4,6 @@ import BlurFadeText from "@/components/magicui/blur-fade-text";
 import ContactSection from "@/components/section/contact-section";
 import HonorsSection from "@/components/section/honors-section";
 import ProjectsSection from "@/components/section/projects-section";
-import WorkSection from "@/components/section/work-section";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
 import { ArrowUpRight } from "lucide-react";
@@ -45,15 +44,6 @@ export default function Page() {
           <div className="prose max-w-full leading-relaxed text-pretty text-muted-foreground dark:prose-invert">
             <Markdown>{DATA.summary}</Markdown>
           </div>
-        </BlurFade>
-      </section>
-
-      <section id="work" className="flex flex-col gap-y-6">
-        <BlurFade delay={BLUR_FADE_DELAY * 5}>
-          <h2 className="text-xl font-bold">Research &amp; Experience</h2>
-        </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 6}>
-          <WorkSection />
         </BlurFade>
       </section>
 
@@ -114,22 +104,6 @@ export default function Page() {
             </div>
           </BlurFade>
         ))}
-      </section>
-
-      <section id="skills" className="flex flex-col gap-y-4">
-        <BlurFade delay={BLUR_FADE_DELAY * 9}>
-          <h2 className="text-xl font-bold">Skills</h2>
-        </BlurFade>
-        <div className="flex flex-wrap gap-2">
-          {DATA.skills.map((skill, index) => (
-            <BlurFade key={skill.name} delay={BLUR_FADE_DELAY * 10 + index * 0.05}>
-              <div className="flex h-8 w-fit items-center gap-2 rounded-xl border bg-background px-4 ring-2 ring-border/20">
-                <skill.icon className="size-4" />
-                <span className="text-sm font-medium text-foreground">{skill.name}</span>
-              </div>
-            </BlurFade>
-          ))}
-        </div>
       </section>
 
       <section id="projects">

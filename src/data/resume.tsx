@@ -1,26 +1,5 @@
 import { Icons } from "@/components/icons";
-import { Cplusplus } from "@/components/ui/svgs/cplusplus";
-import { Git } from "@/components/ui/svgs/git";
-import { Matlab } from "@/components/ui/svgs/matlab";
-import { Python } from "@/components/ui/svgs/python";
-import { PyTorch } from "@/components/ui/svgs/pytorch";
-import { Ros } from "@/components/ui/svgs/ros";
-import { BookOpenText, BrainCircuit, Combine, Cpu, HomeIcon, Terminal, type LucideIcon } from "lucide-react";
-import type { ComponentType, SVGProps } from "react";
-
-type Icon = LucideIcon | ComponentType<SVGProps<SVGSVGElement>>;
-
-export type Experience = {
-  company: string;
-  href: string;
-  location: string;
-  title: string;
-  logoUrl: string;
-  start: string;
-  end: string | null;
-  /** Markdown. */
-  description: string;
-};
+import { BookOpenText, HomeIcon } from "lucide-react";
 
 export type Project = {
   title: string;
@@ -51,23 +30,11 @@ export const DATA = {
   initials: "ZX",
   url: "https://sormaker.github.io",
   description:
-    "Master's student at SUSTech working on robot learning, from VLA policies for dual-arm manipulation to embedded control.",
+    "Master's student at SUSTech working on robot learning.",
   summary:
-    "I'm a master's student in Control Science and Engineering at [SUSTech](/#education). I'm interested in how robots learn manipulation skills from demonstrations, and in what it takes to make those skills hold up on real hardware.\n\nMost recently, I collected teleoperation data for a multi-task VLA policy on the TRON2 dual-arm robot at [TRON Camp 2026](/#work), where our team placed 2nd in table clearing and 5th overall. Before that, I explored LLM-based planning for vision-and-language navigation and co-authored [MD-Grasp](/#publications), a real-time grasp detection network (PRCV 2025).\n\nMy foundation is in control. At Donghua University, I built a self-balancing autonomous bicycle and a vision-guided laser tracking system — both won [national first prizes](/#honors). I'm currently looking for **internships in embodied AI and VLA**.",
+    "I'm a master's student in Control Science and Engineering at [SUSTech](/#education). I'm interested in how robots learn manipulation skills from demonstrations, and in what it takes to make those skills hold up on real hardware.\n\nMost recently, I collected teleoperation data for a multi-task VLA policy on the TRON2 dual-arm robot at [TRON Camp 2026](/#projects), where our team placed 2nd in table clearing and 5th overall. Before that, I explored LLM-based planning for vision-and-language navigation and co-authored [MD-Grasp](/#publications), a real-time grasp detection network (PRCV 2025).\n\nMy foundation is in control. At Donghua University, I built a self-balancing autonomous bicycle and a vision-guided laser tracking system — both won [national first prizes](/#honors). I'm currently looking for **internships in embodied AI and VLA**.",
   // TODO(补充): 头像目前是卡通狗，求职用可换成真人照片
   avatarUrl: "/avatar.webp",
-  skills: [
-    { name: "Python", icon: Python },
-    { name: "C/C++", icon: Cplusplus },
-    { name: "PyTorch", icon: PyTorch },
-    { name: "ROS", icon: Ros },
-    { name: "MATLAB", icon: Matlab },
-    { name: "Git", icon: Git },
-    { name: "Linux", icon: Terminal },
-    { name: "Imitation Learning", icon: BrainCircuit },
-    { name: "Embedded Control", icon: Cpu },
-    { name: "Sensor Fusion", icon: Combine },
-  ] satisfies { name: string; icon: Icon }[],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog/", icon: BookOpenText, label: "Blog" },
@@ -77,42 +44,6 @@ export const DATA = {
     email: "xiezy3@gmail.com",
     github: "https://github.com/SORMaker",
   },
-  work: [
-    {
-      company: "TRON Camp 2026 · Multi-Task VLA",
-      href: "https://www.limxdynamics.com/",
-      location: "LimX Dynamics",
-      title: "Team LimY · 2nd in table clearing, 5th overall",
-      logoUrl: "/organizations/limx-dynamics.svg",
-      start: "Aug 2026",
-      end: "Aug 2026",
-      description:
-        "Competed onsite (Aug 3–7) with the TRON2 dual-arm robot.\n\n- **Team work.** The team fine-tuned one π0.5 model with LoRA for two tasks, flower insertion and table clearing (language-conditioned sorting), using [FluxVLA](https://github.com/emoPointer/FluxVLA-Tron2) on 8× RTX PRO 6000 GPUs. The multi-task model outperformed single-task models. The team used DAgger to collect 50 correction demos for failed insertions, on top of 300 flower-insertion demos.\n- **Data.** Collected VR teleoperation demos with the team (500 for table clearing across 10 prompts, 600 for cloth folding) and removed corrupted episodes.",
-    },
-    {
-      // TODO(补充): 起始时间（目前假定 Sep 2025）；论文投稿后补充状态与链接
-      company: "Frequency Estimation with an Unknown Bias",
-      href: "https://www.sustech.edu.cn/en/",
-      location: "Shenzhen, China",
-      title: "Research project · SUSTech · Supervised by Prof. LIU Tao",
-      logoUrl: "/education/sustech.png",
-      start: "Sep 2025",
-      end: null,
-      description:
-        "Adaptive estimation of the unknown frequencies of discrete-time multi-tone sinusoids with an unknown constant bias.\n\n- Extended a two-filter adaptive estimator with a new parameterization of the characteristic polynomial.\n- Proved that the regressor is persistently exciting, including when the bias is zero, and that the estimation errors converge globally and exponentially. After normalization, the gain conditions no longer depend on signal amplitude or initial state.\n- Tested the design in simulations with a bias, large initial states, and larger amplitudes.\n\nThe manuscript, co-authored with my supervisor, is under review.",
-    },
-    {
-      company: "Science & Innovation Lab",
-      href: "https://english.dhu.edu.cn/",
-      location: "Shanghai, China",
-      title: "Student Lead · Donghua University",
-      logoUrl: "/education/donghua.png",
-      start: "Sep 2023",
-      end: "Jul 2024",
-      description:
-        "Led Donghua's student science-and-innovation lab.\n\n- Trained 50+ new members.\n- Organized smart-car competitions and lab open days for 100+ people.",
-    },
-  ] satisfies Experience[],
   education: [
     {
       school: "Southern University of Science and Technology",
@@ -230,6 +161,13 @@ export const DATA = {
     },
   ] satisfies Honor[],
   publications: [
+    {
+      title:
+        "Global Exponential Estimation of the Unknown Frequencies of Discrete-Time Multi-Tone Sinusoidal Signals with an Unknown Bias",
+      authors: "**Zhengyang Xie**, Tao Liu",
+      venue: "Under review",
+      year: "",
+    },
     {
       // TODO(补充): 论文 DOI / PDF 链接
       title:
